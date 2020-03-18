@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5582238381762932262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 923748579421403800}
+  - component: {fileID: 6853151688025864765}
+  m_Layer: 0
+  m_Name: BossMonsterSpawner
+  m_TagString: BossRoomSpawnPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &923748579421403800
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5582238381762932262}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 380, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6853151688025864765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5582238381762932262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbde1595c345b0749a4613a813f99b85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  goblin: {fileID: 5352711896049922025, guid: 8e79485c29830f84f937539ce83700ec, type: 3}
+  orc: {fileID: 4002334464691260510, guid: bd4649a4904588d4e8d214b47e918e2b, type: 3}
+  ogre: {fileID: 3022563334573675291, guid: 9d7c8966be1088c458d793692e5030bb, type: 3}
+  bandit: {fileID: 6449718875869077946, guid: 5afa7ff160f6a314bb6135057c3df565, type: 3}
+  snake: {fileID: 864735429891608093, guid: f7d161c4dba38e3439bce535ceadead7, type: 3}
+  spider: {fileID: 8755613647978763504, guid: 4022e7add809dac4da89fd2630b5494a, type: 3}
+  wolf: {fileID: 1907472088958727614, guid: c2e836d85e6d5ef488b931d296f8a891, type: 3}
+  imp: {fileID: 8417198385636292994, guid: 83d48eb6b77fda448abea7792317cd00, type: 3}
+  skeleton: {fileID: 2065066135085540529, guid: d86b893818247854081da9ae180dfefc,
+    type: 3}
+  mage: {fileID: 3148350569694560869, guid: af69aaf5d2c10a640a1d12b5f261b7a5, type: 3}

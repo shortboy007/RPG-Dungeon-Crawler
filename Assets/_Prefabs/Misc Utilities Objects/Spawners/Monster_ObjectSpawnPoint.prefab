@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1522408976207926467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1184208039189427609}
+  - component: {fileID: 7803607288596377981}
+  - component: {fileID: 4242018808847660958}
+  - component: {fileID: 1495283289454997382}
+  m_Layer: 0
+  m_Name: Monster_ObjectSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1184208039189427609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522408976207926467}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.43, y: -2.1206856, z: -11.292694}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7803607288596377981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522408976207926467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 551ccc530f4c76d46a7ea2961f165bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  isMonster: 0
+  isObject: 0
+--- !u!114 &4242018808847660958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522408976207926467}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b447710b8a489ff4db0a66984b94db21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  goblin: {fileID: 7648260275388742081, guid: cbf6a6f49fa12534a874b21f72d04078, type: 3}
+  orc: {fileID: 5298468999463059491, guid: db62d1af8eb119843820a670d42269bd, type: 3}
+  ogre: {fileID: 1764953238246500897, guid: 54ea394a9813eb940a48add5dedda863, type: 3}
+  bandit: {fileID: 2246921842971627653, guid: 28750a2d3df5d7f46a69b9b74f5f6c9f, type: 3}
+  snake: {fileID: 5840959340016148938, guid: 5cc14f34f130d5d43a2e4aaa4feae0d6, type: 3}
+  spider: {fileID: 5691111560668840004, guid: ddccd213de642b4418f977040d65f714, type: 3}
+  wolf: {fileID: 5787471111652513330, guid: 2beadfa5816793746a0e481fb93fbbe8, type: 3}
+  imp: {fileID: 2064874015446375269, guid: e40f0d628937f2949a3adddc6945b29a, type: 3}
+  skeleton: {fileID: 2391656317312414821, guid: af5008dac3a0964438846507a43835a4,
+    type: 3}
+  mage: {fileID: 8538408556197670847, guid: e7d6345e6e01c234aba720eec4acfbcf, type: 3}
+--- !u!114 &1495283289454997382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522408976207926467}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b43e0d74ea9d304ba6ce42de564d15b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  chair: {fileID: 3776230786944765486, guid: f32999aff3dd4644daa503c83771d5c2, type: 3}
+  table: {fileID: 2346590406001974591, guid: 5d06902e767cbe543991352fbc5835d1, type: 3}
+  chest: {fileID: 2259413446883335199, guid: c9d2b6533ae87e34db2421756f92f8db, type: 3}
