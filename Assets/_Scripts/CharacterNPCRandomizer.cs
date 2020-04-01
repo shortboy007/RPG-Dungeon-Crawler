@@ -68,6 +68,10 @@ public class CharacterNPCRandomizer : MonoBehaviour
 
     public static int hairColorType;
 
+    public bool slimBodyChosen = false;
+
+    public bool muscledBodyChosen = false;
+
     void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -83,7 +87,9 @@ public class CharacterNPCRandomizer : MonoBehaviour
     public void resetBodyType()
     {
         bodySlim.SetActive(false);
-        bodyMuscled.SetActive(false);    
+        bodyMuscled.SetActive(false);
+        slimBodyChosen = false;
+        muscledBodyChosen = false;
     }
 
     public void resetFace()
@@ -140,11 +146,12 @@ public class CharacterNPCRandomizer : MonoBehaviour
             if (bodyPhysiqueChosen == 0)
             {
                 bodySlim.SetActive(true);
-
+                slimBodyChosen = true;
             }
             else if (bodyPhysiqueChosen == 1)
             {
                 bodyMuscled.SetActive(true);
+                muscledBodyChosen = true;
             }                           
         }
     

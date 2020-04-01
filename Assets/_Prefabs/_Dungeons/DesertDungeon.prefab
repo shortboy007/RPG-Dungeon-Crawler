@@ -771,7 +771,7 @@ GameObject:
   - component: {fileID: 560922597121177609}
   - component: {fileID: 5094009252209306419}
   - component: {fileID: 3611371379941642708}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DesertDungeon
   m_TagString: Dungeon
   m_Icon: {fileID: 0}
@@ -1232,6 +1232,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6853151688025864765, guid: 268936bba7d8c1542afec5d60d287881,
+        type: 3}
+      propertyPath: wolf
+      value: 
+      objectReference: {fileID: 5311139145542441377, guid: c2e836d85e6d5ef488b931d296f8a891,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 268936bba7d8c1542afec5d60d287881, type: 3}
 --- !u!4 &3858871088177973000 stripped

@@ -1443,6 +1443,7 @@ MonoBehaviour:
   targetSpawn: {fileID: 0}
   textBox: {fileID: 0}
   text: {fileID: 0}
+  playerDetected: 0
 --- !u!1 &1876196536234112248
 GameObject:
   m_ObjectHideFlags: 0
@@ -3352,7 +3353,7 @@ GameObject:
   - component: {fileID: 6434275571355261772}
   - component: {fileID: 8864266060341647506}
   - component: {fileID: 1204353825081506789}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DarkTowerDungeon
   m_TagString: Dungeon
   m_Icon: {fileID: 0}
@@ -3430,8 +3431,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 4, z: 1}
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1 &5335026413448737470
 GameObject:
   m_ObjectHideFlags: 0
@@ -9022,6 +9023,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6853151688025864765, guid: 268936bba7d8c1542afec5d60d287881,
+        type: 3}
+      propertyPath: wolf
+      value: 
+      objectReference: {fileID: 5311139145542441377, guid: c2e836d85e6d5ef488b931d296f8a891,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 268936bba7d8c1542afec5d60d287881, type: 3}
 --- !u!4 &5187176488970053290 stripped

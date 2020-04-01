@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1986652461089468879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.10000024, y: 0.10000024, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1463724907433252448}
   - {fileID: 5175159072711000170}
@@ -77,8 +77,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 35, z: 1}
-  m_Center: {x: 0, y: 17, z: 0}
+  m_Size: {x: 1, y: 5, z: 1}
+  m_Center: {x: 0, y: 2.5, z: 0}
 --- !u!1 &3279676256248487104
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,18 +339,18 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: ea1ccde6cec77bd4a849f2f55823a304,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 199.99954
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: ea1ccde6cec77bd4a849f2f55823a304,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 200
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: ea1ccde6cec77bd4a849f2f55823a304,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f657e559d488b5146aa90524ee88578b, type: 2}
+      objectReference: {fileID: 2100000, guid: 5d1b808f516b60f4580d7410bf33e0c1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea1ccde6cec77bd4a849f2f55823a304, type: 3}
 --- !u!4 &4039257922835398553 stripped

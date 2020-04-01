@@ -201,7 +201,7 @@ public class PlayerStatHandler : MonoBehaviour
 
         if (thisBody.GetComponent<WeaponSelectHandlerV3>().holdingStaff == true && thisBody != null && hasMagic && Input.GetKeyDown(KeyCode.L))
         {
-            PlayerMagic = PlayerMagic - 10;
+            PlayerMagic = PlayerMagic - 5;
 
             magicText = magicTextBox.GetComponent<Text>();
             magicText.text = "Magic: " + PlayerMagic;
@@ -277,7 +277,7 @@ public class PlayerStatHandler : MonoBehaviour
             invGoldText.text = "Gold: " + GoldCount;
         }
 
-/*        if (Input.GetKeyDown(KeyCode.Keypad4))
+        if (Input.GetKeyDown(KeyCode.Alpha8))
         {
             GoldCount = 1000;
 
@@ -286,8 +286,10 @@ public class PlayerStatHandler : MonoBehaviour
 
             invGoldText = invGoldTextBox.GetComponent<Text>();
             invGoldText.text = "Gold: " + GoldCount;
+
+            GoldCounter = GoldCount;
         }
-        if (Input.GetKeyDown(KeyCode.Keypad5))
+        /*if (Input.GetKeyDown(KeyCode.Keypad5))
         {
             GoldCount = 0;
 

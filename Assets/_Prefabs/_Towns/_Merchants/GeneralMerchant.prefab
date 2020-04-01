@@ -2782,8 +2782,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 3, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 0.5, z: 20}
+  m_Center: {x: 0, y: 1, z: 10.5}
 --- !u!95 &5734144005091838870
 Animator:
   serializedVersion: 3
@@ -2817,7 +2817,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStatHandler: {fileID: 0}
   player: {fileID: 0}
-  playerAnims: {fileID: 5734144005091838870}
   walkSpeed: 5
   runSpeed: 20
   jumpHeight: 1
@@ -2844,7 +2843,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c145084cba4ac548aab84004018f1ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAnims: {fileID: 5734144005091838870}
+  playerAnims: {fileID: 3957138088760503350}
+  playerAnims2: {fileID: 7868814655713703459}
   walkSpeed: 5
   runSpeed: 20
   jumpHeight: 1
@@ -2864,7 +2864,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  playerAnims: {fileID: 5734144005091838870}
+  playerAnims: {fileID: 3957138088760503350}
+  playerAnims2: {fileID: 7868814655713703459}
   walkSpeed: 5
   runSpeed: 20
   jumpHeight: 1
@@ -2885,7 +2886,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56f96c9002e598046aa6bd8e2f714956, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAnims: {fileID: 5734144005091838870}
+  playerAnims: {fileID: 3957138088760503350}
+  playerAnims2: {fileID: 7868814655713703459}
   walkSpeed: 5
   runSpeed: 20
   jumpHeight: 1
@@ -2923,7 +2925,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   home: {fileID: 0}
-  playerAnims: {fileID: 5734144005091838870}
+  playerAnims: {fileID: 3957138088760503350}
+  playerAnims2: {fileID: 7868814655713703459}
   walkSpeed: 5
   runSpeed: 20
   jumpHeight: 1
@@ -2941,7 +2944,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15ad2758500f0ae4a816b878c678f86c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAnims: {fileID: 5734144005091838870}
+  playerAnims: {fileID: 3957138088760503350}
+  playerAnims2: {fileID: 7868814655713703459}
   walkSpeed: 5
   runSpeed: 20
   jumpHeight: 1
@@ -3043,6 +3047,8 @@ MonoBehaviour:
   hairColor3: {fileID: 2100000, guid: 05adc5d3f353b1146aedd4f16ec8a932, type: 2}
   hairColor4: {fileID: 2100000, guid: 0549b6d753e7b2142a8f2806fb392e81, type: 2}
   hairColor5: {fileID: 2100000, guid: 661abcee91954b2439fb07cd87f957a8, type: 2}
+  slimBodyChosen: 0
+  muscledBodyChosen: 0
 --- !u!1 &7469580784339603127
 GameObject:
   m_ObjectHideFlags: 0

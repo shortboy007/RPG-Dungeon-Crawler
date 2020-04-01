@@ -14,9 +14,10 @@ public class NPCGuardAIMultiScriptStates : MonoBehaviour
 
     //public GameObject monster;
     //public GameObject[] monsters;
-    public GameObject guardSword;
+    public GameObject slimGuardSword;
+    public GameObject muscledGuardSword;
 
-    public Animator playerAnims;
+    //public Animator playerAnims;
 
     public int walkSpeed = 5;
     public int runSpeed = 20;
@@ -56,15 +57,17 @@ public class NPCGuardAIMultiScriptStates : MonoBehaviour
 
         float distToPlayer = Vector3.Distance(this.transform.position, player.transform.position);
         //Debug.Log("Player" + distToPlayer);
-        if (distToPlayer < 15)
+        if (distToPlayer <= 10)
         {
             closeToPlayer = true;
+            safeDistance = false;
         }
         else
         {
             closeToPlayer = false;
+            safeDistance = true;
         }
-        if (distToPlayer < 1000)
+        if (distToPlayer < 100)
         {
             tooCloseToPlayerWithWeapon = true;
         }
@@ -83,29 +86,30 @@ public class NPCGuardAIMultiScriptStates : MonoBehaviour
              closeToMonster = false;
          }*/
 
-        if (distToPlayer > 15 /*&& distToMonster > 30*/)
-        {
-            safeDistance = true;
-        }
-        else
-        {
-            safeDistance = false;
-        }
         if (closeToPlayer)
         {
             ChaseState();
         }
-        if (tooCloseToPlayerWithWeapon && PlayerStatHandler.PeopleKilled >=1 && thisBody.GetComponent<WeaponSelectHandlerV3>().notHoldingWeapon == false && thisBody != null)
+        else if (closeToPlayer && tooCloseToPlayerWithWeapon && PlayerStatHandler.PeopleKilled >=1 && thisBody.GetComponent<WeaponSelectHandlerV3>().notHoldingWeapon == false && thisBody != null)
         {           
             AttackState();
         }
         if(thisBody.GetComponent<WeaponSelectHandlerV3>().notHoldingWeapon == false && thisBody != null)
         {
-            guardSword.SetActive(true);
+            if (this.GetComponent<CharacterNPCRandomizer>().slimBodyChosen == true)
+            {
+                slimGuardSword.SetActive(true);
+            }
+            if (this.GetComponent<CharacterNPCRandomizer>().muscledBodyChosen == true)
+            {
+                muscledGuardSword.SetActive(true);
+            }
+
         }
         else
         {
-            guardSword.SetActive(false);
+            slimGuardSword.SetActive(false);
+            muscledGuardSword.SetActive(false);
         }
         if(safeDistance)
         {

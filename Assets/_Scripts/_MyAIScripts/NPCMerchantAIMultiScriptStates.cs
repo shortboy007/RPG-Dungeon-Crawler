@@ -10,7 +10,7 @@ public class NPCMerchantAIMultiScriptStates : MonoBehaviour
     //public GameObject monster;
     //public GameObject[] monsters;
 
-    public Animator playerAnims;
+    //public Animator playerAnims;
 
     public int walkSpeed = 5;
     public int runSpeed = 20;
@@ -44,15 +44,17 @@ public class NPCMerchantAIMultiScriptStates : MonoBehaviour
     {
         float distToPlayer = Vector3.Distance(this.transform.position, player.transform.position);
         //Debug.Log("Player" + distToPlayer);
-        if (distToPlayer < 15)
+        if (distToPlayer <= 10)
         {
             closeToPlayer = true;
+            safeDistance = false;
         }
         else
         {
             closeToPlayer = false;
+            safeDistance = true;
         }
-        if (distToPlayer < 200)
+        if (distToPlayer < 100)
         {
             tooCloseToPlayerWithWeapon = true;
         }
@@ -71,20 +73,11 @@ public class NPCMerchantAIMultiScriptStates : MonoBehaviour
              closeToMonster = false;
          }*/
 
-        if (distToPlayer > 15 /*&& distToMonster > 30*/)
-        {
-            safeDistance = true;
-        }
-        else
-        {
-            safeDistance = false;
-        }
-
         if (closeToPlayer)
         {
             ChaseState();
         }
-        if (tooCloseToPlayerWithWeapon && PlayerStatHandler.PeopleKilled >=1 && player.GetComponent<WeaponSelectHandlerV3>().notHoldingWeapon == false)
+        else if (closeToPlayer && tooCloseToPlayerWithWeapon && PlayerStatHandler.PeopleKilled >=1 && player.GetComponent<WeaponSelectHandlerV3>().notHoldingWeapon == false)
         {           
             RetreatState();
         }

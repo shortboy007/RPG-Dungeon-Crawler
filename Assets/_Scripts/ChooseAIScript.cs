@@ -21,7 +21,7 @@ public class ChooseAIScript : MonoBehaviour
     {
     }
 
-    private void OnTriggerStay(Collider dungeon)
+    void OnTriggerStay(Collider dungeon)
     {
         if (dungeon.gameObject.tag == "Dungeon")
         {

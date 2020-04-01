@@ -61,6 +61,7 @@ public class EnemyHealthHandler : MonoBehaviour
         GameObject collidedWith = coll.gameObject;
         if (collidedWith.tag == "WSword" || collidedWith.tag == "WDagger" || collidedWith.tag == "WClub" || collidedWith.tag == "WStaff" || collidedWith.tag == "WArrow" || collidedWith.tag == "MagicBall" || collidedWith.tag == "Fist")
         {
+            Debug.Log(PlayerStatHandler.woodWeaponDamage);
             enemyHealth = enemyHealth - PlayerStatHandler.woodWeaponDamage;
         }
 

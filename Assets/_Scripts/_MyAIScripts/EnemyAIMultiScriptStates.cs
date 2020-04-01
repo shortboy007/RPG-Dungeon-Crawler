@@ -10,7 +10,7 @@ public Transform player;
 //public GameObject monster;
 //public GameObject[] monsters;
 
-public Animator playerAnims;
+//public Animator playerAnims;
 
 public int walkSpeed = 5;
 public int runSpeed = 20;
@@ -19,7 +19,7 @@ public static int count = 0;
 public int directionToTurn;
 public int peopleKilled;
 
-    public bool inDungeon = false;
+public bool inDungeon = false;
 public bool closeToPlayer = false;
 public bool tooCloseToPlayerWithWeapon = false;
 public bool closeToMonster = false;
@@ -49,10 +49,12 @@ void Update()
     if (distToPlayer <= 100)
     {
         closeToPlayer = true;
+        safeDistance = false;
     }
     else
     {
         closeToPlayer = false;
+        safeDistance = true;
     }
     if (distToPlayer <= 50)
     {
@@ -72,15 +74,6 @@ void Update()
      {
          closeToMonster = false;
      }*/
-
-    if (distToPlayer > 200 /*&& distToMonster > 30*/)
-    {
-        safeDistance = true;
-    }
-    else
-    {
-        safeDistance = false;
-    }
 
     if (closeToPlayer)
     {

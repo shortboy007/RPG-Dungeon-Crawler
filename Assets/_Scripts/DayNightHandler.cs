@@ -39,7 +39,7 @@ public class DayNightHandler : MonoBehaviour
     // Update is called once per frame
    void Update()
     {        
-        light.GetComponent<Light>().intensity = lightIntensity;
+       this.gameObject.GetComponent<Light>().intensity = lightIntensity;
 
         count++;
 

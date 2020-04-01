@@ -21,6 +21,7 @@ public class EnemyAIDungeonScript : MonoBehaviour
 
     public bool closeToPlayer = false;
     public bool withinAttackDistance = false;
+    public bool safeDistance = false;
     public bool idleState = false;
     public bool wanderState = false;
     public bool patrolState = false;
@@ -43,16 +44,18 @@ public class EnemyAIDungeonScript : MonoBehaviour
 
         float distToPlayer = Vector3.Distance(transform.position, player.transform.position);
         //Debug.Log("Player" + distToPlayer);
-        if (distToPlayer <= 20)
+        if (distToPlayer <= 10)
         {
             closeToPlayer = true;
+            safeDistance = false;
         }
         else
         {
             closeToPlayer = false;
+            safeDistance = true;
         }
 
-        if(distToPlayer <= 10)
+        if(distToPlayer <= 5)
         {
             withinAttackDistance = true;
         }
@@ -69,7 +72,7 @@ public class EnemyAIDungeonScript : MonoBehaviour
         {
             AttackState();
         }
-        else
+        else if(safeDistance)
         {
             IdleState();
             //stateTimer();

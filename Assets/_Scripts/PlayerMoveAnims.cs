@@ -14,6 +14,8 @@ public class PlayerMoveAnims : MonoBehaviour
     public int runSpeed = 20;
     public int jumpHeight = 1;
 
+    public bool autoWalking = false;
+
     void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -31,7 +33,29 @@ public class PlayerMoveAnims : MonoBehaviour
         transform.Rotate(0, rotate, 0);
         transform.Translate(0, jump, 0);
 
-        if (Input.GetKey(KeyCode.W))
+        //if(autoWalking)
+        //{
+        //    transform.position =  * Time.deltaTime * walkSpeed;
+        //    playerAnims.SetBool("isWalkingForward", true);
+        //    playerAnims2.SetBool("isWalkingForward", true);
+        //    playerAnims3.SetBool("isWalkingForward", true);
+        //    playerAnims4.SetBool("isWalkingForward", true);
+        //    playerAnims5.SetBool("isWalkingForward", true);
+        //}
+
+        //if (Input.GetKey(KeyCode.I))
+        //{
+        //    if(!autoWalking)
+        //    {
+        //        autoWalking = true; 
+        //    }
+        //    else if(autoWalking)
+        //    {
+        //        autoWalking = false;
+        //    }                     
+        //}
+
+            if (Input.GetKey(KeyCode.W))
         {
             playerAnims.SetBool("isWalkingForward", true);
             playerAnims2.SetBool("isWalkingForward", true);
@@ -63,7 +87,7 @@ public class PlayerMoveAnims : MonoBehaviour
             playerAnims4.SetBool("isWalkingBackward", false);
             playerAnims5.SetBool("isWalkingBackward", false);
         }
-        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift) || Input.GetMouseButton(2)) 
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) 
         {
             playerAnims.SetBool("isRunningForward", true);
             playerAnims2.SetBool("isRunningForward", true);
@@ -100,24 +124,22 @@ public class PlayerMoveAnims : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.L))
         {
-            playerAnims.SetBool("isGrabbing", true);
-            playerAnims.SetBool("isGrabbing", true);
-            playerAnims2.SetBool("isGrabbing", true);
-            playerAnims3.SetBool("isGrabbing", true);
-            playerAnims4.SetBool("isGrabbing", true);
-            playerAnims5.SetBool("isGrabbing", true);
+            playerAnims.SetBool("isAttackingRanged", true);
+            playerAnims2.SetBool("isAttackingRanged", true);
+            playerAnims3.SetBool("isAttackingRanged", true);
+            playerAnims4.SetBool("isAttackingRanged", true);
+            playerAnims5.SetBool("isAttackingRanged", true);
         }
         else
         {
-            playerAnims.SetBool("isGrabbing", false);
-            playerAnims.SetBool("isGrabbing", false);
-            playerAnims2.SetBool("isGrabbing", false);
-            playerAnims3.SetBool("isGrabbing", false);
-            playerAnims4.SetBool("isGrabbing", false);
-            playerAnims5.SetBool("isGrabbing", false);
+            playerAnims.SetBool("isAttackingRanged", false);
+            playerAnims2.SetBool("isAttackingRanged", false);
+            playerAnims3.SetBool("isAttackingRanged", false);
+            playerAnims4.SetBool("isAttackingRanged", false);
+            playerAnims5.SetBool("isAttackingRanged", false);
         }
 
-        if (Input.GetKeyDown(KeyCode.K) || Input.GetMouseButtonDown(1))
+        if (Input.GetKeyDown(KeyCode.K) || Input.GetMouseButtonDown(1) || Input.GetKey(KeyCode.K) || Input.GetMouseButton(1))
         {
             playerAnims.SetBool("isAttackingBlade", true);
             playerAnims.SetBool("isAttackingBlade", true);
@@ -126,7 +148,7 @@ public class PlayerMoveAnims : MonoBehaviour
             playerAnims4.SetBool("isAttackingBlade", true);
             playerAnims5.SetBool("isAttackingBlade", true);
         }
-        else if (Input.GetKeyDown(KeyCode.W) && Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.W) && Input.GetMouseButtonDown(1))
+        else if (Input.GetKeyDown(KeyCode.W) && Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.W) && Input.GetMouseButtonDown(1) || Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.K) || Input.GetKey(KeyCode.W) && Input.GetMouseButton(1))
         {
             playerAnims.SetBool("isAttackingBlade", true);
             playerAnims.SetBool("isAttackingBlade", true);
@@ -144,7 +166,7 @@ public class PlayerMoveAnims : MonoBehaviour
             playerAnims4.SetBool("isAttackingBlade", false);
             playerAnims5.SetBool("isAttackingBlade", false);
         }
-        if (Input.GetKeyDown(KeyCode.J) || Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.J) || Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.J) || Input.GetMouseButton(0))
         {
             playerAnims.SetBool("isAttackingBlunt", true);
             playerAnims.SetBool("isAttackingBlunt", true);
@@ -153,7 +175,7 @@ public class PlayerMoveAnims : MonoBehaviour
             playerAnims4.SetBool("isAttackingBlunt", true);
             playerAnims5.SetBool("isAttackingBlunt", true);
         }
-        else if (Input.GetKeyDown(KeyCode.J) && Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.J) && Input.GetMouseButtonDown(0))
+        else if (Input.GetKeyDown(KeyCode.J) && Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.J) && Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.J) && Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.J) && Input.GetMouseButton(0))
         {
             playerAnims.SetBool("isAttackingBlunt", true);
             playerAnims.SetBool("isAttackingBlunt", true);

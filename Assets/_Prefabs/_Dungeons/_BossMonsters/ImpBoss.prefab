@@ -1409,18 +1409,18 @@ GameObject:
   m_Component:
   - component: {fileID: 660031386235219369}
   - component: {fileID: 8417198385636292996}
-  - component: {fileID: 6698375365201734984}
   - component: {fileID: 5859116074952533725}
   - component: {fileID: 7523266130640574118}
   - component: {fileID: 3662537717688822327}
+  - component: {fileID: 4430823887346701733}
   - component: {fileID: 7523266131575120280}
   - component: {fileID: 7523266131575120281}
   - component: {fileID: 7523266131575120282}
   - component: {fileID: 7523266131575120283}
-  - component: {fileID: 8463765556838089045}
   - component: {fileID: 7918017998190281550}
   - component: {fileID: 5270616623929784923}
   - component: {fileID: 813219274225988605}
+  - component: {fileID: 1765295591729920410}
   m_Layer: 15
   m_Name: ImpBoss
   m_TagString: Monster
@@ -1454,7 +1454,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8417198385636292994}
   serializedVersion: 2
-  m_Mass: 200
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -1462,25 +1462,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!95 &6698375365201734984
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8417198385636292994}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ea603a4f6aad5ca45a8cb8fcc213146e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &5859116074952533725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1506,7 +1487,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8417198385636292994}
-  m_Material: {fileID: 13400000, guid: e52fb17f9b1e7fd48b8955f1391d3688, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -1526,7 +1507,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStatHandler: {fileID: 0}
   player: {fileID: 0}
-  playerAnims: {fileID: 6823056998077308999}
   walkSpeed: 5
   runSpeed: 20
   jumpHeight: 1
@@ -1542,6 +1522,28 @@ MonoBehaviour:
   attackState: 0
   retreatState: 0
   returnState: 0
+--- !u!114 &4430823887346701733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8417198385636292994}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b1dab960aadce47822b9da71557ad3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  playerAnims: {fileID: 6823056998077308999}
+  playerAnims2: {fileID: 0}
+  walkSpeed: 5
+  runSpeed: 20
+  jumpHeight: 1
+  count: 0
+  isAttacking: 0
+  closeToPlayer: 0
+  awayFromPlayer: 0
 --- !u!114 &7523266131575120280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1555,6 +1557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAnims: {fileID: 6823056998077308999}
+  playerAnims2: {fileID: 0}
   walkSpeed: 5
   runSpeed: 20
   jumpHeight: 1
@@ -1574,6 +1577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAnims: {fileID: 6823056998077308999}
+  playerAnims2: {fileID: 0}
   walkSpeed: 5
   runSpeed: 20
   jumpHeight: 1
@@ -1592,6 +1596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAnims: {fileID: 6823056998077308999}
+  playerAnims2: {fileID: 0}
   walkSpeed: 5
   runSpeed: 20
   jumpHeight: 1
@@ -1611,31 +1616,12 @@ MonoBehaviour:
   player: {fileID: 0}
   home: {fileID: 0}
   playerAnims: {fileID: 6823056998077308999}
+  playerAnims2: {fileID: 0}
   walkSpeed: 5
   runSpeed: 20
   jumpHeight: 1
   count: 0
   closeToPlayer: 0
---- !u!114 &8463765556838089045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8417198385636292994}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4c3cba69061c4346871e151c76cdb36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  playerAnims: {fileID: 6823056998077308999}
-  walkSpeed: 5
-  runSpeed: 20
-  jumpHeight: 1
-  count: 0
-  closeToPlayer: 0
-  awayFromPlayer: 0
 --- !u!114 &7918017998190281550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1657,6 +1643,7 @@ MonoBehaviour:
   directionToTurn: 0
   closeToPlayer: 0
   withinAttackDistance: 0
+  safeDistance: 0
   idleState: 0
   wanderState: 0
   patrolState: 0
@@ -1696,6 +1683,19 @@ MonoBehaviour:
   invExperienceTextBox: {fileID: 0}
   invExperienceText: {fileID: 0}
   hitCount: 0
+--- !u!65 &1765295591729920410
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8417198385636292994}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 4, z: 20}
+  m_Center: {x: 0, y: 0, z: 10.5}
 --- !u!1 &8417198385769923499
 GameObject:
   m_ObjectHideFlags: 0
@@ -2177,6 +2177,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ImpSlimMBody
       objectReference: {fileID: 0}
+    - target: {fileID: 2459128594821518319, guid: 334be186105cba841af75c700abd461d,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8f6d84d17079c984dbcd4d228eabedc3, type: 2}
     - target: {fileID: 5524394658471558805, guid: 334be186105cba841af75c700abd461d,
         type: 3}
       propertyPath: m_LocalPosition.x

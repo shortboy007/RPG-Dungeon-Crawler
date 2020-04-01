@@ -3554,7 +3554,7 @@ GameObject:
   - component: {fileID: 8886478295261388386}
   - component: {fileID: 7034218960568474722}
   - component: {fileID: 5933381302418881533}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PracticeDungeon
   m_TagString: Dungeon
   m_Icon: {fileID: 0}
@@ -4026,6 +4026,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6853151688025864765, guid: 268936bba7d8c1542afec5d60d287881,
+        type: 3}
+      propertyPath: wolf
+      value: 
+      objectReference: {fileID: 5311139145542441377, guid: c2e836d85e6d5ef488b931d296f8a891,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 268936bba7d8c1542afec5d60d287881, type: 3}
 --- !u!4 &1272961719318577895 stripped

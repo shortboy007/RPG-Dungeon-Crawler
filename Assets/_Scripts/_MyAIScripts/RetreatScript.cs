@@ -8,6 +8,7 @@ public class RetreatScript : MonoBehaviour
     public Transform home;
 
     public Animator playerAnims;
+    public Animator playerAnims2;
 
     public int walkSpeed = 5;
     public int runSpeed = 10;
@@ -50,6 +51,10 @@ public class RetreatScript : MonoBehaviour
         }
 
         playerAnims.SetBool("isRunningForward", true);
+        if (playerAnims2 != null)
+        {
+            playerAnims2.SetBool("isRunningForward", true);
+        }
 
     }
 }

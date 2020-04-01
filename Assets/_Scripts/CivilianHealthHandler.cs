@@ -25,7 +25,7 @@ public class CivilianHealthHandler : MonoBehaviour
         experienceTextBox = GameObject.FindWithTag("ExperienceText");
         invExperienceTextBox = GameObject.FindWithTag("InvExperienceText");
 
-    civilianHealth = Random.Range(50, 100);
+    civilianHealth = Random.Range(25, 50);
     }
 
     void Update()
