@@ -44,7 +44,7 @@ public class EnemyAIDungeonScript : MonoBehaviour
 
         float distToPlayer = Vector3.Distance(transform.position, player.transform.position);
         //Debug.Log("Player" + distToPlayer);
-        if (distToPlayer <= 10)
+        if (distToPlayer <= 7)
         {
             closeToPlayer = true;
             safeDistance = false;

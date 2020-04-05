@@ -46,7 +46,7 @@ void Update()
 {
     float distToPlayer = Vector3.Distance(this.transform.position, player.transform.position);
     //Debug.Log("Player" + distToPlayer);
-    if (distToPlayer <= 100)
+    if (distToPlayer <= 10)
     {
         closeToPlayer = true;
         safeDistance = false;
@@ -56,7 +56,7 @@ void Update()
         closeToPlayer = false;
         safeDistance = true;
     }
-    if (distToPlayer <= 50)
+    if (distToPlayer <= 5)
     {
         tooCloseToPlayerWithWeapon = true;
     }

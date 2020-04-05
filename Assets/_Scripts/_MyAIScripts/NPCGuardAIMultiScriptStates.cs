@@ -67,7 +67,7 @@ public class NPCGuardAIMultiScriptStates : MonoBehaviour
             closeToPlayer = false;
             safeDistance = true;
         }
-        if (distToPlayer < 100)
+        if (distToPlayer < 1000)
         {
             tooCloseToPlayerWithWeapon = true;
         }
@@ -90,9 +90,13 @@ public class NPCGuardAIMultiScriptStates : MonoBehaviour
         {
             ChaseState();
         }
-        else if (closeToPlayer && tooCloseToPlayerWithWeapon && PlayerStatHandler.PeopleKilled >=1 && thisBody.GetComponent<WeaponSelectHandlerV3>().notHoldingWeapon == false && thisBody != null)
+        else if (tooCloseToPlayerWithWeapon && PlayerStatHandler.PeopleKilled >=1 && thisBody.GetComponent<WeaponSelectHandlerV3>().notHoldingWeapon == false && thisBody != null)
         {           
             AttackState();
+        }
+        else if(safeDistance)
+        {
+           stateTimer();
         }
         if(thisBody.GetComponent<WeaponSelectHandlerV3>().notHoldingWeapon == false && thisBody != null)
         {
@@ -111,10 +115,7 @@ public class NPCGuardAIMultiScriptStates : MonoBehaviour
             slimGuardSword.SetActive(false);
             muscledGuardSword.SetActive(false);
         }
-        if(safeDistance)
-        {
-           stateTimer();
-        }
+
     }
 
     void stateTimer()

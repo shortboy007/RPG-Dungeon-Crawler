@@ -866,7 +866,7 @@ Animator:
   m_GameObject: {fileID: 2611436851037254769}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 2553ffdc5bee55c41bb594ed6ad3e0ba, type: 3}
-  m_Controller: {fileID: 9100000, guid: 0b3936e839b242b4d8cb2a2ecd829d08, type: 2}
+  m_Controller: {fileID: 9100000, guid: 775b490793edbe7449a6dd3b34e465e8, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -2730,7 +2730,6 @@ GameObject:
   - component: {fileID: 7469580784323223386}
   - component: {fileID: 7469580784323223387}
   - component: {fileID: 2945621441064601940}
-  - component: {fileID: 5734144005091838870}
   - component: {fileID: 4114856029890767477}
   - component: {fileID: 7469580784323223391}
   - component: {fileID: 1395996538179440403}
@@ -2741,6 +2740,7 @@ GameObject:
   - component: {fileID: 8044391311477581671}
   - component: {fileID: 3149073551784689734}
   - component: {fileID: 6900495949024068938}
+  - component: {fileID: -4986079565470382096}
   m_Layer: 18
   m_Name: TavernMerchant
   m_TagString: TavernMerchant
@@ -2781,7 +2781,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!65 &7469580784323223387
 BoxCollider:
@@ -2809,25 +2809,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.5, z: 20}
   m_Center: {x: 0, y: 1, z: 10.5}
---- !u!95 &5734144005091838870
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7469580784323223388}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8f6d84d17079c984dbcd4d228eabedc3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &4114856029890767477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3075,6 +3056,25 @@ MonoBehaviour:
   hairColor5: {fileID: 2100000, guid: 661abcee91954b2439fb07cd87f957a8, type: 2}
   slimBodyChosen: 0
   muscledBodyChosen: 0
+--- !u!95 &-4986079565470382096
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7469580784323223388}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 775b490793edbe7449a6dd3b34e465e8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7469580784339603127
 GameObject:
   m_ObjectHideFlags: 0
@@ -3696,7 +3696,7 @@ Animator:
   m_GameObject: {fileID: 8598135821567861806}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 964c2fab131f822478218212c4201741, type: 3}
-  m_Controller: {fileID: 9100000, guid: 0b3936e839b242b4d8cb2a2ecd829d08, type: 2}
+  m_Controller: {fileID: 9100000, guid: 775b490793edbe7449a6dd3b34e465e8, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1

@@ -29,7 +29,7 @@ public class AttackScript : MonoBehaviour
     {
             float distToPlayer = Vector3.Distance(this.transform.position, player.transform.position);
             //Debug.Log("Player" + distToPlayer);
-            if (distToPlayer <= 3)
+            if (distToPlayer <= 5)
             {
                 closeToPlayer = true;
             }

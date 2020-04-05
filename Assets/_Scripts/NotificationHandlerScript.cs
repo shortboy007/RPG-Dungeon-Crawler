@@ -323,22 +323,22 @@ public class NotificationHandlerScript : MonoBehaviour
         if (Player.gameObject.name == "StoneEngravingColliderTutorial4")
         {
             notificationText = notificationTextBox.GetComponent<Text>();
-            notificationText.text = "Press E to open doors. Some doors lead to dead ends. Be careful!";
+            notificationText.text = "Press J and K to do a melee attack. L is a ranged attack when a staff or bow is equipped.";
         }
         if (Player.gameObject.name == "StoneEngravingColliderTutorial5")
         {
             notificationText = notificationTextBox.GetComponent<Text>();
-            notificationText.text = "Press J and K to do a melee attack. L is a ranged attack when a staff or bow is equipped.";
+            notificationText.text = "If you get hit by a monster or other hostile NPC, your health will decrease.";
         }
         if (Player.gameObject.name == "StoneEngravingColliderTutorial6")
         {
             notificationText = notificationTextBox.GetComponent<Text>();
-            notificationText.text = "You have a limited amount of magic and arrows so use them sparingly. You can pick up potions and arrows from monsters.";
+            notificationText.text = "Press 9 to replenish health by using a potion. Press 0 to replenish magic by using a potion. You have a limited number of potions, but you can pick up more from monsters.";
         }
         if (Player.gameObject.name == "StoneEngravingColliderTutorial7")
         {
             notificationText = notificationTextBox.GetComponent<Text>();
-            notificationText.text = "Press 9 to replenish health by using a potion. Press 0 to replenish magic by using a potion. You have a limited number of potions, but you can pick up more from monsters.";
+            notificationText.text = "You have a limited amount of magic and arrows so use them sparingly. You can pick up potions and arrows from monsters.";
         }
         if (Player.gameObject.name == "StoneEngravingColliderTutorial8")
         {

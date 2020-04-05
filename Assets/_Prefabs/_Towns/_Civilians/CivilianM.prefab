@@ -780,7 +780,7 @@ Animator:
   m_GameObject: {fileID: 2524241499524682265}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 2553ffdc5bee55c41bb594ed6ad3e0ba, type: 3}
-  m_Controller: {fileID: 9100000, guid: 0b3936e839b242b4d8cb2a2ecd829d08, type: 2}
+  m_Controller: {fileID: 9100000, guid: 775b490793edbe7449a6dd3b34e465e8, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1151,7 +1151,6 @@ GameObject:
   - component: {fileID: 2758878236741192786}
   - component: {fileID: 2758878236741192787}
   - component: {fileID: 7566111276053994076}
-  - component: {fileID: 1041189759172991134}
   - component: {fileID: 2758878236741192784}
   - component: {fileID: 2758878236741192791}
   - component: {fileID: 5366222101626906912}
@@ -1162,6 +1161,7 @@ GameObject:
   - component: {fileID: 3852580977084050349}
   - component: {fileID: 3990338001915427773}
   - component: {fileID: 5159786965415642425}
+  - component: {fileID: 1212190821503337570}
   m_Layer: 18
   m_Name: CivilianM
   m_TagString: Civilian
@@ -1202,7 +1202,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!65 &2758878236741192787
 BoxCollider:
@@ -1230,25 +1230,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.5, z: 20}
   m_Center: {x: 0, y: 1, z: 10.5}
---- !u!95 &1041189759172991134
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2758878236741192788}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4a0cf83ac9cc1bd42974a4f71715d16a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &2758878236741192784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1495,6 +1476,25 @@ MonoBehaviour:
   hairColor5: {fileID: 2100000, guid: 661abcee91954b2439fb07cd87f957a8, type: 2}
   slimBodyChosen: 0
   muscledBodyChosen: 0
+--- !u!95 &1212190821503337570
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2758878236741192788}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 775b490793edbe7449a6dd3b34e465e8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2758878236854336217
 GameObject:
   m_ObjectHideFlags: 0
@@ -3293,7 +3293,7 @@ Animator:
   m_GameObject: {fileID: 6601257931036042134}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 964c2fab131f822478218212c4201741, type: 3}
-  m_Controller: {fileID: 9100000, guid: 0b3936e839b242b4d8cb2a2ecd829d08, type: 2}
+  m_Controller: {fileID: 9100000, guid: 775b490793edbe7449a6dd3b34e465e8, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1

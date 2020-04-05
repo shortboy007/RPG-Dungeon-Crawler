@@ -54,7 +54,7 @@ public class NPCMerchantAIMultiScriptStates : MonoBehaviour
             closeToPlayer = false;
             safeDistance = true;
         }
-        if (distToPlayer < 100)
+        if (distToPlayer < 500)
         {
             tooCloseToPlayerWithWeapon = true;
         }
@@ -77,7 +77,7 @@ public class NPCMerchantAIMultiScriptStates : MonoBehaviour
         {
             ChaseState();
         }
-        else if (closeToPlayer && tooCloseToPlayerWithWeapon && PlayerStatHandler.PeopleKilled >=1 && player.GetComponent<WeaponSelectHandlerV3>().notHoldingWeapon == false)
+        if (tooCloseToPlayerWithWeapon && PlayerStatHandler.PeopleKilled >=1 && player.GetComponent<WeaponSelectHandlerV3>().notHoldingWeapon == false)
         {           
             RetreatState();
         }

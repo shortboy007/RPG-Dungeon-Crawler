@@ -984,6 +984,7 @@ GameObject:
   - component: {fileID: 169797233763112708}
   - component: {fileID: 1137178459713739395}
   - component: {fileID: -9007663068368232266}
+  - component: {fileID: 1062133052530529518}
   m_Layer: 15
   m_Name: Ogre
   m_TagString: Monster
@@ -1023,7 +1024,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!114 &7204135010969799207
 MonoBehaviour:
@@ -1228,6 +1229,7 @@ MonoBehaviour:
   directionToTurn: 0
   closeToPlayer: 0
   withinAttackDistance: 0
+  safeDistance: 0
   idleState: 0
   wanderState: 0
   patrolState: 0
@@ -1259,6 +1261,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 4, z: 20}
   m_Center: {x: 0, y: 0, z: 10.5}
+--- !u!95 &1062133052530529518
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1764953238246500897}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 775b490793edbe7449a6dd3b34e465e8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1764953238262889418
 GameObject:
   m_ObjectHideFlags: 0
@@ -2571,17 +2592,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1648055696712677270, guid: e4590913532cb6b46b3b0fcbea42240f,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 775b490793edbe7449a6dd3b34e465e8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4590913532cb6b46b3b0fcbea42240f, type: 3}
---- !u!4 &885560425625238270 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8670856642231442156, guid: e4590913532cb6b46b3b0fcbea42240f,
-    type: 3}
-  m_PrefabInstance: {fileID: 8367466757623095314}
-  m_PrefabAsset: {fileID: 0}
 --- !u!95 &7115730576918550404 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1648055696712677270, guid: e4590913532cb6b46b3b0fcbea42240f,
+    type: 3}
+  m_PrefabInstance: {fileID: 8367466757623095314}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &885560425625238270 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8670856642231442156, guid: e4590913532cb6b46b3b0fcbea42240f,
     type: 3}
   m_PrefabInstance: {fileID: 8367466757623095314}
   m_PrefabAsset: {fileID: 0}

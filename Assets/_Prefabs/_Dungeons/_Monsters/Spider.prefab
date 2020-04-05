@@ -1278,6 +1278,7 @@ GameObject:
   - component: {fileID: 2874327462897387824}
   - component: {fileID: 9038854380266076520}
   - component: {fileID: -7397731985652063972}
+  - component: {fileID: -8070124409178998347}
   m_Layer: 15
   m_Name: Spider
   m_TagString: Monster
@@ -1315,7 +1316,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!114 &4217108687960749474
 MonoBehaviour:
@@ -1520,6 +1521,7 @@ MonoBehaviour:
   directionToTurn: 0
   closeToPlayer: 0
   withinAttackDistance: 0
+  safeDistance: 0
   idleState: 0
   wanderState: 0
   patrolState: 0
@@ -1551,6 +1553,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.5, z: 20}
   m_Center: {x: 0, y: 0, z: 10}
+--- !u!95 &-8070124409178998347
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5691111560668840004}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6b24daebc1e64bd44a3ece5aac5787e0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5766184530308178937
 GameObject:
   m_ObjectHideFlags: 0

@@ -702,6 +702,7 @@ GameObject:
   - component: {fileID: 5561284036745178750}
   - component: {fileID: 4960077032747376216}
   - component: {fileID: -8884540593400752210}
+  - component: {fileID: 2542105334724397191}
   m_Layer: 15
   m_Name: Skeleton
   m_TagString: Monster
@@ -740,7 +741,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!114 &3299716203888653991
 MonoBehaviour:
@@ -945,6 +946,7 @@ MonoBehaviour:
   directionToTurn: 0
   closeToPlayer: 0
   withinAttackDistance: 0
+  safeDistance: 0
   idleState: 0
   wanderState: 0
   patrolState: 0
@@ -976,6 +978,25 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 4, z: 20}
   m_Center: {x: 0, y: 0, z: 10.5}
+--- !u!95 &2542105334724397191
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2391656317312414821}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 775b490793edbe7449a6dd3b34e465e8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2391656317329057166
 GameObject:
   m_ObjectHideFlags: 0
@@ -2406,6 +2427,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkeletonSlimMBody
       objectReference: {fileID: 0}
+    - target: {fileID: 5551718200968934996, guid: cdc3ae2b7e997d3428b3393c3dd298b8,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 775b490793edbe7449a6dd3b34e465e8, type: 2}
     - target: {fileID: 2558512480804821806, guid: cdc3ae2b7e997d3428b3393c3dd298b8,
         type: 3}
       propertyPath: m_LocalPosition.x

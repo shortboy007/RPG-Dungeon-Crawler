@@ -162,7 +162,7 @@ Animator:
   m_GameObject: {fileID: 446302906590936708}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 964c2fab131f822478218212c4201741, type: 3}
-  m_Controller: {fileID: 9100000, guid: 0b3936e839b242b4d8cb2a2ecd829d08, type: 2}
+  m_Controller: {fileID: 9100000, guid: 775b490793edbe7449a6dd3b34e465e8, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -551,7 +551,6 @@ GameObject:
   - component: {fileID: 785793204667902329}
   - component: {fileID: 785793204667902328}
   - component: {fileID: 5020961614059290487}
-  - component: {fileID: 2512233933716946357}
   - component: {fileID: 7625843364716987424}
   - component: {fileID: 785793204667902332}
   - component: {fileID: 6935731030341106081}
@@ -562,6 +561,7 @@ GameObject:
   - component: {fileID: 210984884998639940}
   - component: {fileID: 398692275628355483}
   - component: {fileID: 8889392527738539753}
+  - component: {fileID: -5098333425301776108}
   m_Layer: 18
   m_Name: WeaponMerchant
   m_TagString: WeaponMerchant
@@ -612,7 +612,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!65 &785793204667902328
 BoxCollider:
@@ -640,25 +640,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.5, z: 20}
   m_Center: {x: 0, y: 1, z: 10.5}
---- !u!95 &2512233933716946357
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 785793204667902335}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8f6d84d17079c984dbcd4d228eabedc3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &7625843364716987424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -905,6 +886,25 @@ MonoBehaviour:
   hairColor5: {fileID: 2100000, guid: 661abcee91954b2439fb07cd87f957a8, type: 2}
   slimBodyChosen: 0
   muscledBodyChosen: 0
+--- !u!95 &-5098333425301776108
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785793204667902335}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 775b490793edbe7449a6dd3b34e465e8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &785793204797874162
 GameObject:
   m_ObjectHideFlags: 0
@@ -3297,7 +3297,7 @@ Animator:
   m_GameObject: {fileID: 6441950020486806348}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 2553ffdc5bee55c41bb594ed6ad3e0ba, type: 3}
-  m_Controller: {fileID: 9100000, guid: 0b3936e839b242b4d8cb2a2ecd829d08, type: 2}
+  m_Controller: {fileID: 9100000, guid: 775b490793edbe7449a6dd3b34e465e8, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
