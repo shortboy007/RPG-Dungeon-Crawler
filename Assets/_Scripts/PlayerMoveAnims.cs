@@ -58,140 +58,181 @@ public class PlayerMoveAnims : MonoBehaviour
             if (Input.GetKey(KeyCode.W))
         {
             playerAnims.SetBool("isWalkingForward", true);
-            playerAnims2.SetBool("isWalkingForward", true);
-            playerAnims3.SetBool("isWalkingForward", true);
-            playerAnims4.SetBool("isWalkingForward", true);
-            playerAnims5.SetBool("isWalkingForward", true);
+            if (playerAnims2 != null || playerAnims3 != null || playerAnims4 != null || playerAnims5 != null)
+            {
+                playerAnims2.SetBool("isWalkingForward", true);
+                playerAnims3.SetBool("isWalkingForward", true);
+                playerAnims4.SetBool("isWalkingForward", true);
+                playerAnims5.SetBool("isWalkingForward", true);
+            }
         }
         else
         {
             playerAnims.SetBool("isWalkingForward", false);
-            playerAnims2.SetBool("isWalkingForward", false);
-            playerAnims3.SetBool("isWalkingForward", false);
-            playerAnims4.SetBool("isWalkingForward", false);
-            playerAnims5.SetBool("isWalkingForward", false);
+            if (playerAnims2 != null || playerAnims3 != null || playerAnims4 != null || playerAnims5 != null)
+            {
+                playerAnims2.SetBool("isWalkingForward", false);
+                playerAnims3.SetBool("isWalkingForward", false);
+                playerAnims4.SetBool("isWalkingForward", false);
+                playerAnims5.SetBool("isWalkingForward", false);
+            }
         }
         if (Input.GetKey(KeyCode.S))
         {
             playerAnims.SetBool("isWalkingBackward", true);
-            playerAnims2.SetBool("isWalkingBackward", true);
-            playerAnims3.SetBool("isWalkingBackward", true);
-            playerAnims4.SetBool("isWalkingBackward", true);
-            playerAnims5.SetBool("isWalkingBackward", true);
+            if (playerAnims2 != null || playerAnims3 != null || playerAnims4 != null || playerAnims5 != null)
+            {
+                playerAnims2.SetBool("isWalkingBackward", true);
+                playerAnims3.SetBool("isWalkingBackward", true);
+                playerAnims4.SetBool("isWalkingBackward", true);
+                playerAnims5.SetBool("isWalkingBackward", true);
+            }
         }
         else
         {
             playerAnims.SetBool("isWalkingBackward", false);
-            playerAnims2.SetBool("isWalkingBackward", false);
-            playerAnims3.SetBool("isWalkingBackward", false);
-            playerAnims4.SetBool("isWalkingBackward", false);
-            playerAnims5.SetBool("isWalkingBackward", false);
+            if (playerAnims2 != null || playerAnims3 != null || playerAnims4 != null || playerAnims5 != null)
+            {
+                playerAnims2.SetBool("isWalkingBackward", false);
+                playerAnims3.SetBool("isWalkingBackward", false);
+                playerAnims4.SetBool("isWalkingBackward", false);
+                playerAnims5.SetBool("isWalkingBackward", false);
+            }
         }
         if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)) 
         {
             playerAnims.SetBool("isRunningForward", true);
-            playerAnims2.SetBool("isRunningForward", true);
-            playerAnims3.SetBool("isRunningForward", true);
-            playerAnims4.SetBool("isRunningForward", true);
-            playerAnims5.SetBool("isRunningForward", true);
+            if (playerAnims2 != null || playerAnims3 != null || playerAnims4 != null || playerAnims5 != null)
+            {
+                playerAnims2.SetBool("isRunningForward", true);
+                playerAnims3.SetBool("isRunningForward", true);
+                playerAnims4.SetBool("isRunningForward", true);
+                playerAnims5.SetBool("isRunningForward", true);
+                
+            }
             transform.Translate(runForward, 0, 0);
         }
         else
         {
             playerAnims.SetBool("isRunningForward", false);
-            playerAnims2.SetBool("isRunningForward", false);
-            playerAnims3.SetBool("isRunningForward", false);
-            playerAnims4.SetBool("isRunningForward", false);
-            playerAnims5.SetBool("isRunningForward", false);
+            if (playerAnims2 != null || playerAnims3 != null || playerAnims4 != null || playerAnims5 != null)
+            {
+                playerAnims2.SetBool("isRunningForward", false);
+                playerAnims3.SetBool("isRunningForward", false);
+                playerAnims4.SetBool("isRunningForward", false);
+                playerAnims5.SetBool("isRunningForward", false);
+            }
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             playerAnims.SetBool("isJumping", true);
-            playerAnims.SetBool("isJumping", true);
-            playerAnims2.SetBool("isJumping", true);
-            playerAnims3.SetBool("isJumping", true);
-            playerAnims4.SetBool("isJumping", true);
-            playerAnims5.SetBool("isJumping", true);
+            if (playerAnims2 != null || playerAnims3 != null || playerAnims4 != null || playerAnims5 != null)
+            {
+                playerAnims2.SetBool("isJumping", true);
+                playerAnims3.SetBool("isJumping", true);
+                playerAnims4.SetBool("isJumping", true);
+                playerAnims5.SetBool("isJumping", true);
+            }
         }
         else
         {
             playerAnims.SetBool("isJumping", false);
-            playerAnims.SetBool("isJumping", false);
-            playerAnims2.SetBool("isJumping", false);
-            playerAnims3.SetBool("isJumping", false);
-            playerAnims4.SetBool("isJumping", false);
-            playerAnims5.SetBool("isJumping", false);
+            if (playerAnims2 != null || playerAnims3 != null || playerAnims4 != null || playerAnims5 != null)
+            {
+                playerAnims2.SetBool("isJumping", false);
+                playerAnims3.SetBool("isJumping", false);
+                playerAnims4.SetBool("isJumping", false);
+                playerAnims5.SetBool("isJumping", false);
+            }
         }
         if (Input.GetKeyDown(KeyCode.L))
         {
             playerAnims.SetBool("isAttackingRanged", true);
-            playerAnims2.SetBool("isAttackingRanged", true);
-            playerAnims3.SetBool("isAttackingRanged", true);
-            playerAnims4.SetBool("isAttackingRanged", true);
-            playerAnims5.SetBool("isAttackingRanged", true);
+            if (playerAnims2 != null || playerAnims3 != null || playerAnims4 != null || playerAnims5 != null)
+            {
+                playerAnims2.SetBool("isAttackingRanged", true);
+                playerAnims3.SetBool("isAttackingRanged", true);
+                playerAnims4.SetBool("isAttackingRanged", true);
+                playerAnims5.SetBool("isAttackingRanged", true);
+            }
         }
         else
         {
             playerAnims.SetBool("isAttackingRanged", false);
-            playerAnims2.SetBool("isAttackingRanged", false);
-            playerAnims3.SetBool("isAttackingRanged", false);
-            playerAnims4.SetBool("isAttackingRanged", false);
-            playerAnims5.SetBool("isAttackingRanged", false);
+            if (playerAnims2 != null || playerAnims3 != null || playerAnims4 != null || playerAnims5 != null)
+            {
+                playerAnims2.SetBool("isAttackingRanged", false);
+                playerAnims3.SetBool("isAttackingRanged", false);
+                playerAnims4.SetBool("isAttackingRanged", false);
+                playerAnims5.SetBool("isAttackingRanged", false);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.K) || Input.GetMouseButtonDown(1) || Input.GetKey(KeyCode.K) || Input.GetMouseButton(1))
         {
             playerAnims.SetBool("isAttackingBlade", true);
-            playerAnims.SetBool("isAttackingBlade", true);
-            playerAnims2.SetBool("isAttackingBlade", true);
-            playerAnims3.SetBool("isAttackingBlade", true);
-            playerAnims4.SetBool("isAttackingBlade", true);
-            playerAnims5.SetBool("isAttackingBlade", true);
+            if (playerAnims2 != null || playerAnims3 != null || playerAnims4 != null || playerAnims5 != null)
+            {
+                playerAnims2.SetBool("isAttackingBlade", true);
+                playerAnims3.SetBool("isAttackingBlade", true);
+                playerAnims4.SetBool("isAttackingBlade", true);
+                playerAnims5.SetBool("isAttackingBlade", true);
+            }
         }
         else if (Input.GetKeyDown(KeyCode.W) && Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.W) && Input.GetMouseButtonDown(1) || Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.K) || Input.GetKey(KeyCode.W) && Input.GetMouseButton(1))
         {
             playerAnims.SetBool("isAttackingBlade", true);
-            playerAnims.SetBool("isAttackingBlade", true);
-            playerAnims2.SetBool("isAttackingBlade", true);
-            playerAnims3.SetBool("isAttackingBlade", true);
-            playerAnims4.SetBool("isAttackingBlade", true);
-            playerAnims5.SetBool("isAttackingBlade", true);
+            if (playerAnims2 != null || playerAnims3 != null || playerAnims4 != null || playerAnims5 != null)
+            {
+                playerAnims2.SetBool("isAttackingBlade", true);
+                playerAnims3.SetBool("isAttackingBlade", true);
+                playerAnims4.SetBool("isAttackingBlade", true);
+                playerAnims5.SetBool("isAttackingBlade", true);
+            }
         }
         else
         {
             playerAnims.SetBool("isAttackingBlade", false);
-            playerAnims.SetBool("isAttackingBlade", false);
-            playerAnims2.SetBool("isAttackingBlade", false);
-            playerAnims3.SetBool("isAttackingBlade", false);
-            playerAnims4.SetBool("isAttackingBlade", false);
-            playerAnims5.SetBool("isAttackingBlade", false);
+            if (playerAnims2 != null || playerAnims3 != null || playerAnims4 != null || playerAnims5 != null)
+            {
+                playerAnims2.SetBool("isAttackingBlade", false);
+                playerAnims3.SetBool("isAttackingBlade", false);
+                playerAnims4.SetBool("isAttackingBlade", false);
+                playerAnims5.SetBool("isAttackingBlade", false);
+            }
         }
         if (Input.GetKeyDown(KeyCode.J) || Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.J) || Input.GetMouseButton(0))
         {
             playerAnims.SetBool("isAttackingBlunt", true);
-            playerAnims.SetBool("isAttackingBlunt", true);
-            playerAnims2.SetBool("isAttackingBlunt", true);
-            playerAnims3.SetBool("isAttackingBlunt", true);
-            playerAnims4.SetBool("isAttackingBlunt", true);
-            playerAnims5.SetBool("isAttackingBlunt", true);
+            if (playerAnims2 != null || playerAnims3 != null || playerAnims4 != null || playerAnims5 != null)
+            {
+                playerAnims2.SetBool("isAttackingBlunt", true);
+                playerAnims3.SetBool("isAttackingBlunt", true);
+                playerAnims4.SetBool("isAttackingBlunt", true);
+                playerAnims5.SetBool("isAttackingBlunt", true);
+            }
         }
         else if (Input.GetKeyDown(KeyCode.J) && Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.J) && Input.GetMouseButtonDown(0) || Input.GetKey(KeyCode.J) && Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.J) && Input.GetMouseButton(0))
         {
             playerAnims.SetBool("isAttackingBlunt", true);
-            playerAnims.SetBool("isAttackingBlunt", true);
-            playerAnims2.SetBool("isAttackingBlunt", true);
-            playerAnims3.SetBool("isAttackingBlunt", true);
-            playerAnims4.SetBool("isAttackingBlunt", true);
-            playerAnims5.SetBool("isAttackingBlunt", true);
+            if (playerAnims2 != null || playerAnims3 != null || playerAnims4 != null || playerAnims5 != null)
+            {
+                playerAnims2.SetBool("isAttackingBlunt", true);
+                playerAnims3.SetBool("isAttackingBlunt", true);
+                playerAnims4.SetBool("isAttackingBlunt", true);
+                playerAnims5.SetBool("isAttackingBlunt", true);
+            }
         }
         else
         {
             playerAnims.SetBool("isAttackingBlunt", false);
-            playerAnims.SetBool("isAttackingBlunt", false);
-            playerAnims2.SetBool("isAttackingBlunt", false);
-            playerAnims3.SetBool("isAttackingBlunt", false);
-            playerAnims4.SetBool("isAttackingBlunt", false);
-            playerAnims5.SetBool("isAttackingBlunt", false);
+            if (playerAnims2 != null || playerAnims3 != null || playerAnims4 != null || playerAnims5 != null)
+            {
+                playerAnims2.SetBool("isAttackingBlunt", false);
+                playerAnims3.SetBool("isAttackingBlunt", false);
+                playerAnims4.SetBool("isAttackingBlunt", false);
+                playerAnims5.SetBool("isAttackingBlunt", false);
+            }
         }
 
         /*if (Input.GetKey(KeyCode.Y))

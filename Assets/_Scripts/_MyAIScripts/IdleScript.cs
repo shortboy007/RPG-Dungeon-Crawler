@@ -31,11 +31,9 @@ public class IdleScript : MonoBehaviour
         runSpeed = 0;
 
         playerAnims.SetBool("isWalkingForward", false);
-        playerAnims.SetBool("isRunningForward", false);
         if (playerAnims2 != null)
         {
             playerAnims2.SetBool("isWalkingForward", false);
-            playerAnims2.SetBool("isRunningForward", false);
         }
     }
 }

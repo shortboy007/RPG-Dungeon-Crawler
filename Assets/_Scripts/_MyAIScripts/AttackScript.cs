@@ -69,16 +69,16 @@ public class AttackScript : MonoBehaviour
     {
         if (Player.gameObject.tag == "Player")
         {
-                playerAnims.SetBool("isAttackingBlunt", true);
-                //playerAnims.SetBool("isWalkingForward", false);
-                playerAnims.SetBool("isRunningForward", false);
-                if (playerAnims2 != null)
-                {
-                    playerAnims2.SetBool("isAttackingBlunt", true);
-                    playerAnims2.SetBool("isRunningForward", false);
-                }
+            playerAnims.SetBool("isAttackingBlunt", true);
+            //playerAnims.SetBool("isWalkingForward", false);
+            playerAnims.SetBool("isRunningForward", false);
+            if (playerAnims2 != null)
+            {
+                playerAnims2.SetBool("isAttackingBlunt", true);
+                playerAnims2.SetBool("isRunningForward", false);
             }
         }
+    }
     void OnTriggerExit(Collider Player)
     {
         if (Player.gameObject.tag == "Player")

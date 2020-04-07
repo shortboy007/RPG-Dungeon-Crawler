@@ -160,7 +160,7 @@ public class EnemyAIDungeonScript : MonoBehaviour
         playerAnims.SetBool("isWalkingForward", true);
 
         //Debug.Log("WanderState");       
-        }
+    }
 
     private void OnTriggerStay(Collider monster)
     {
