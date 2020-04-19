@@ -295,12 +295,12 @@ public class WeaponSelectHandlerV3 : MonoBehaviour
             notHoldingWeapon = true;
         }
 
-        if (player.GetComponent<PlayerStatHandler>().hasArrows == true && holdingBow && Input.GetKeyDown(KeyCode.L))
+        if (player.GetComponent<PlayerStatHandler>().hasArrows == true && holdingBow && Input.GetKeyDown(KeyCode.L) || player.GetComponent<PlayerStatHandler>().hasArrows == true && holdingBow && Input.GetMouseButtonDown(2))
         {
             shootArrow();
         }
 
-        if (player.GetComponent<PlayerStatHandler>().hasMagic == true && holdingStaff && Input.GetKeyDown(KeyCode.L))
+        if (player.GetComponent<PlayerStatHandler>().hasMagic == true && holdingStaff && Input.GetKeyDown(KeyCode.L) || player.GetComponent<PlayerStatHandler>().hasMagic == true && holdingStaff && Input.GetMouseButtonDown(2))
         {
             castMagic();
         }

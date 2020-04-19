@@ -5,7 +5,6 @@ using UnityEngine;
 public class WanderScript : MonoBehaviour
 {
     public Animator playerAnims;
-    public Animator playerAnims2;
 
     public int walkSpeed = 5;
     public int runSpeed = 20;
@@ -55,10 +54,6 @@ public class WanderScript : MonoBehaviour
         }
 
         playerAnims.SetBool("isWalkingForward", true);
-        if (playerAnims2 != null)
-        {
-            playerAnims2.SetBool("isWalkingForward", true);
-        }
     }
     void Wander()
     {

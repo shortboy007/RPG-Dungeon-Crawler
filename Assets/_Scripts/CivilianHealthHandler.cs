@@ -11,6 +11,11 @@ public class CivilianHealthHandler : MonoBehaviour
 
     public int civilianHealth;
 
+    public GameObject healthBar;
+
+    public RectTransform healthBarForeground;
+    public RectTransform healthBarBackground;
+
     public GameObject peopleKilledTextBox;
     public Text peopleKilledText;
     public GameObject experienceTextBox;
@@ -25,7 +30,9 @@ public class CivilianHealthHandler : MonoBehaviour
         experienceTextBox = GameObject.FindWithTag("ExperienceText");
         invExperienceTextBox = GameObject.FindWithTag("InvExperienceText");
 
-    civilianHealth = Random.Range(25, 50);
+        civilianHealth = Random.Range(25, 50);
+
+        //healthBarBackground.sizeDelta = new Vector2(civilianHealth, healthBarBackground.sizeDelta.y);
     }
 
     void Update()
@@ -59,17 +66,35 @@ public class CivilianHealthHandler : MonoBehaviour
         GameObject collidedWith = coll.gameObject;
         if (collidedWith.tag == "WSword" || collidedWith.tag == "WDagger" || collidedWith.tag == "WClub" || collidedWith.tag == "WStaff" || collidedWith.tag == "WArrow" || collidedWith.tag == "MagicBall" || collidedWith.tag == "Fist")
         {
-            civilianHealth = civilianHealth - PlayerStatHandler.woodWeaponDamage;
+            civilianHealth = civilianHealth - PlayerStatHandler.woodWeaponDamage;            
+            healthBarForeground.sizeDelta = new Vector2(civilianHealth, healthBarForeground.sizeDelta.y);
         }
 
         if (collidedWith.tag == "ISword" || collidedWith.tag == "IDagger" || collidedWith.tag == "IClub" || collidedWith.tag == "IStaff" || collidedWith.tag == "IArrow")
         {
             civilianHealth = civilianHealth - PlayerStatHandler.ironWeaponDamage;
+            healthBarForeground.sizeDelta = new Vector2(civilianHealth, healthBarForeground.sizeDelta.y);
         }
 
         if (collidedWith.tag == "SSword" || collidedWith.tag == "SDagger" || collidedWith.tag == "SClub" || collidedWith.tag == "SStaff" || collidedWith.tag == "SArrow")
         {
             civilianHealth = civilianHealth - PlayerStatHandler.steelWeaponDamage;
+            healthBarForeground.sizeDelta = new Vector2(civilianHealth, healthBarForeground.sizeDelta.y);
+        }
+    }
+
+    void OnTriggerStay(Collider Player)
+    {
+        if (Player.gameObject.tag == "Player")
+        {
+            healthBar.SetActive(true);
+        }
+    }
+    void OnTriggerExit(Collider Player)
+    {
+        if (Player.gameObject.tag == "Player")
+        {
+            healthBar.SetActive(false);
         }
     }
 }

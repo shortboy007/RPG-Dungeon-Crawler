@@ -105,6 +105,9 @@ public class CharacterCustomizerMenuController : MonoBehaviour
         Time.timeScale = 0;
 
         maleBodyChosen = true;
+        maleBodyMuscled.GetComponent<Animator>().enabled = false;
+        femaleBodySlim.GetComponent<Animator>().enabled = false;
+        femaleBodyMuscled.GetComponent<Animator>().enabled = false;
     }
 
     public void Update()
@@ -371,7 +374,11 @@ public class CharacterCustomizerMenuController : MonoBehaviour
         maleBodySlim.SetActive(false);
         maleBodyMuscled.SetActive(false);
         femaleBodySlim.SetActive(false);
-        femaleBodyMuscled.SetActive(false);     
+        femaleBodyMuscled.SetActive(false);
+        maleBodySlim.GetComponent<Animator>().enabled = false;
+        maleBodyMuscled.GetComponent<Animator>().enabled = false;
+        femaleBodySlim.GetComponent<Animator>().enabled = false;       
+        femaleBodyMuscled.GetComponent<Animator>().enabled = false;
     }
 
     public void resetFace()
@@ -465,6 +472,7 @@ public class CharacterCustomizerMenuController : MonoBehaviour
         maleBodyChosen = true;
         femaleBodyChosen = false;
         maleBodySlim.SetActive(true);
+        maleBodySlim.GetComponent<Animator>().enabled = true;
     }
 
     public void SetFemale()
@@ -474,6 +482,7 @@ public class CharacterCustomizerMenuController : MonoBehaviour
         maleBodyChosen = false;
         femaleBodyChosen = true;
         femaleBodySlim.SetActive(true);
+        femaleBodySlim.GetComponent<Animator>().enabled = true;
     }
 
     public void SetSlimPhysique()
@@ -482,11 +491,15 @@ public class CharacterCustomizerMenuController : MonoBehaviour
         {
                 resetBodyType();
                 maleBodySlim.SetActive(true);
+                maleBodySlim.GetComponent<Animator>().enabled = true;
+
         }
         if (femaleBodyChosen)
         {
                 resetBodyType();
                 femaleBodySlim.SetActive(true);
+                femaleBodySlim.GetComponent<Animator>().enabled = true;
+
         }
     }
 
@@ -496,11 +509,14 @@ public class CharacterCustomizerMenuController : MonoBehaviour
         {
                 resetBodyType();
                 maleBodyMuscled.SetActive(true);
+                maleBodyMuscled.GetComponent<Animator>().enabled = true;
+
         }
         if (femaleBodyChosen)
         {
                 resetBodyType();
                 femaleBodyMuscled.SetActive(true);
+                femaleBodyMuscled.GetComponent<Animator>().enabled = true;
         }
     }
 

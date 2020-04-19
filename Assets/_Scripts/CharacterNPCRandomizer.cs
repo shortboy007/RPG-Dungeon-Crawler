@@ -8,8 +8,7 @@ public class CharacterNPCRandomizer : MonoBehaviour
 {
     public GameObject player;
 
-    public GameObject bodySlim;
-    public GameObject bodyMuscled;
+    public GameObject body;
 
     public GameObject face1;
     public GameObject face2;
@@ -24,7 +23,6 @@ public class CharacterNPCRandomizer : MonoBehaviour
     public GameObject faceSkin5;
 
     public GameObject clothes1;
-    public GameObject clothes2;
 
     public Material clothesColor1;
     public Material clothesColor2;
@@ -68,9 +66,7 @@ public class CharacterNPCRandomizer : MonoBehaviour
 
     public static int hairColorType;
 
-    public bool slimBodyChosen = false;
-
-    public bool muscledBodyChosen = false;
+    public bool bodyChosen = false;
 
     void Start()
     {
@@ -86,10 +82,8 @@ public class CharacterNPCRandomizer : MonoBehaviour
 
     public void resetBodyType()
     {
-        bodySlim.SetActive(false);
-        bodyMuscled.SetActive(false);
-        slimBodyChosen = false;
-        muscledBodyChosen = false;
+        body.SetActive(false);
+        bodyChosen = false;
     }
 
     public void resetFace()
@@ -107,14 +101,11 @@ public class CharacterNPCRandomizer : MonoBehaviour
         faceSkin3.GetComponent<Renderer>().material = skinColor1;
         faceSkin4.GetComponent<Renderer>().material = skinColor1;
         faceSkin5.GetComponent<Renderer>().material = skinColor1;
-
-
     }
 
     public void resetClothesColor()
     {
         clothes1.GetComponent<Renderer>().material = skinColor1;
-        clothes2.GetComponent<Renderer>().material = skinColor1;
     }
 
     public void resetEyeColor()
@@ -145,14 +136,9 @@ public class CharacterNPCRandomizer : MonoBehaviour
             var bodyPhysiqueChosen = Random.Range(0, 1);
             if (bodyPhysiqueChosen == 0)
             {
-                bodySlim.SetActive(true);
-                slimBodyChosen = true;
-            }
-            else if (bodyPhysiqueChosen == 1)
-            {
-                bodyMuscled.SetActive(true);
-                muscledBodyChosen = true;
-            }                           
+                body.SetActive(true);
+                bodyChosen = true;
+            }                       
         }
     
     public void SetFace()
@@ -236,27 +222,22 @@ public class CharacterNPCRandomizer : MonoBehaviour
         if (clothesColorChosen == 0)
         {
             clothes1.GetComponent<Renderer>().material = clothesColor1;
-            clothes2.GetComponent<Renderer>().material = clothesColor1;
         }
         else if (clothesColorChosen == 1)
         {
             clothes1.GetComponent<Renderer>().material = clothesColor2;
-            clothes2.GetComponent<Renderer>().material = clothesColor2;
         }
         else if (clothesColorChosen == 2)
         {
             clothes1.GetComponent<Renderer>().material = clothesColor3;
-            clothes2.GetComponent<Renderer>().material = clothesColor3;
         }
         else if (clothesColorChosen == 3)
         {
             clothes1.GetComponent<Renderer>().material = clothesColor4;
-            clothes2.GetComponent<Renderer>().material = clothesColor4;
         }
         else if (clothesColorChosen == 4)
         {
             clothes1.GetComponent<Renderer>().material = clothesColor5;
-            clothes2.GetComponent<Renderer>().material = clothesColor5;
         }
     }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
 public class EnemyHealthHandler : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class EnemyHealthHandler : MonoBehaviour
     public Animator enemyAnims;
 
     public int enemyHealth;
+
+    public GameObject healthBar;
+
+    public RectTransform healthBarForeground;
+    public RectTransform healthBarBackground;
 
     public GameObject monstersKilledTextBox;
     public Text monstersKilledText;
@@ -28,12 +34,14 @@ public class EnemyHealthHandler : MonoBehaviour
         invExperienceTextBox = GameObject.FindWithTag("InvExperienceText");
 
         enemyHealth = Random.Range(50, 100);
+
+        //healthBarBackground.sizeDelta = new Vector2(enemyHealth, healthBarBackground.sizeDelta.y);
     }
 
     void Update()
-    {
-        
-        if(enemyHealth < 0)
+    {        
+
+        if (enemyHealth < 0)
         {
             enemyHealth = 0;
 
@@ -63,17 +71,22 @@ public class EnemyHealthHandler : MonoBehaviour
         {
             Debug.Log(PlayerStatHandler.woodWeaponDamage);
             enemyHealth = enemyHealth - PlayerStatHandler.woodWeaponDamage;
+            healthBarForeground.sizeDelta = new Vector2(enemyHealth, healthBarForeground.sizeDelta.y);
         }
 
         if (collidedWith.tag == "ISword" || collidedWith.tag == "IDagger" || collidedWith.tag == "IClub" || collidedWith.tag == "IStaff" || collidedWith.tag == "IArrow")
             {
                 enemyHealth = enemyHealth - PlayerStatHandler.ironWeaponDamage;
-            }
+            healthBarForeground.sizeDelta = new Vector2(enemyHealth, healthBarForeground.sizeDelta.y);
+        }
 
         if (collidedWith.tag == "SSword" || collidedWith.tag == "SDagger" || collidedWith.tag == "SClub" || collidedWith.tag == "SStaff" || collidedWith.tag == "SArrow")
             {
                 enemyHealth = enemyHealth - PlayerStatHandler.steelWeaponDamage;
-            }
+            healthBarForeground.sizeDelta = new Vector2(enemyHealth, healthBarForeground.sizeDelta.y);
+        }
+
+        
     }
 
     /*void OnCollisionExit(Collision coll)
@@ -94,5 +107,18 @@ public class EnemyHealthHandler : MonoBehaviour
             enemyAnims.SetBool("isHurt", false);
         }
     }*/
-
+    void OnTriggerEnter(Collider Player)
+    {
+        if (Player.gameObject.tag == "Player")
+        {
+            healthBar.SetActive(true);
+        }
+    }
+    void OnTriggerExit(Collider Player)
+    {
+        if (Player.gameObject.tag == "Player")
+        {
+            healthBar.SetActive(false);
+        }
+    }
 }

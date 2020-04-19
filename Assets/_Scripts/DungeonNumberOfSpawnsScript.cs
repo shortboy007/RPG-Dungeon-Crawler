@@ -9,7 +9,7 @@ public class DungeonNumberOfSpawnsScript : MonoBehaviour
 
     public GameObject oneMonster;
     public GameObject twoMonster;
-    public GameObject twoMonsterOneObject;
+    public GameObject threeMonster;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +28,7 @@ public class DungeonNumberOfSpawnsScript : MonoBehaviour
         }
         else if (monsterToSpawn == 2)
         {
-            var twoMonstersOneObjectSpawned = (GameObject)Instantiate(twoMonsterOneObject, transform.position, transform.rotation);
+            var twoMonstersOneObjectSpawned = (GameObject)Instantiate(threeMonster, transform.position, transform.rotation);
         }
 
         //Debug.Log("Monster" + monsterToSpawn);

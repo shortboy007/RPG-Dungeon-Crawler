@@ -9,7 +9,6 @@ public class ReturnScript : MonoBehaviour
     Vector3 startPos;
 
     public Animator playerAnims;
-    public Animator playerAnims2;
 
     public int walkSpeed = 5;
     public int runSpeed = 20;
@@ -39,17 +38,9 @@ public class ReturnScript : MonoBehaviour
         transform.LookAt(rotateTowardPlayer);*/
 
         playerAnims.SetBool("isRunningForward", true);
-        if (playerAnims2 != null)
-        {
-            playerAnims2.SetBool("isRunningForward", true);
-        }
         if (this.transform.position == startPos)
         {
             playerAnims.SetBool("isRunningForward", false);
-            if (playerAnims2 != null)
-            {
-                playerAnims2.SetBool("isRunningForward", false);
-            }
         }
     }
 }

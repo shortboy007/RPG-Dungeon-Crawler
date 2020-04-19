@@ -9,6 +9,11 @@ public class EnemyBossHealthHandler : MonoBehaviour
 
     public int bossHealth;
 
+    public GameObject healthBar;
+
+    public RectTransform healthBarForeground;
+    public RectTransform healthBarBackground;
+
     public GameObject bossMonstersKilledTextBox;
     public Text bossMonstersKilledText;
     public GameObject experienceTextBox;
@@ -28,6 +33,8 @@ public class EnemyBossHealthHandler : MonoBehaviour
         invExperienceTextBox = GameObject.FindWithTag("InvExperienceText");
 
         bossHealth = Random.Range(100, 150);
+
+        //healthBarBackground.sizeDelta = new Vector2(bossHealth, healthBarBackground.sizeDelta.y);
     }
 
     void Update()
@@ -65,17 +72,34 @@ public class EnemyBossHealthHandler : MonoBehaviour
         if (collidedWith.tag == "WSword" || collidedWith.tag == "WDagger" || collidedWith.tag == "WClub" || collidedWith.tag == "WStaff" || collidedWith.tag == "WArrow" || collidedWith.tag == "MagicBall" || collidedWith.tag == "Fist")
         {
             bossHealth = bossHealth - PlayerStatHandler.woodWeaponDamage;
+            healthBarForeground.sizeDelta = new Vector2(bossHealth, healthBarForeground.sizeDelta.y);
         }
 
         if (collidedWith.tag == "ISword" || collidedWith.tag == "IDagger" || collidedWith.tag == "IClub" || collidedWith.tag == "IStaff" || collidedWith.tag == "IArrow")
         {
             bossHealth = bossHealth - PlayerStatHandler.ironWeaponDamage;
+            healthBarForeground.sizeDelta = new Vector2(bossHealth, healthBarForeground.sizeDelta.y);
         }
 
         if (collidedWith.tag == "SSword" || collidedWith.tag == "SDagger" || collidedWith.tag == "SClub" || collidedWith.tag == "SStaff" || collidedWith.tag == "SArrow")
         {
             bossHealth = bossHealth - PlayerStatHandler.steelWeaponDamage;
+            healthBarForeground.sizeDelta = new Vector2(bossHealth, healthBarForeground.sizeDelta.y);
 
+        }
+    }
+    void OnTriggerEnter(Collider Player)
+    {
+        if (Player.gameObject.tag == "Player")
+        {
+            healthBar.SetActive(true);
+        }
+    }
+    void OnTriggerExit(Collider Player)
+    {
+        if (Player.gameObject.tag == "Player")
+        {
+            healthBar.SetActive(false);
         }
     }
 }

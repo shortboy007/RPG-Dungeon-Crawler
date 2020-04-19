@@ -8,7 +8,6 @@ public class AttackScript : MonoBehaviour
     public Transform player;
 
     public Animator playerAnims;
-    public Animator playerAnims2;
 
     public int walkSpeed = 5;
     public int runSpeed = 20;
@@ -29,7 +28,7 @@ public class AttackScript : MonoBehaviour
     {
             float distToPlayer = Vector3.Distance(this.transform.position, player.transform.position);
             //Debug.Log("Player" + distToPlayer);
-            if (distToPlayer <= 5)
+            if (distToPlayer <= 10)
             {
                 closeToPlayer = true;
             }
@@ -49,11 +48,7 @@ public class AttackScript : MonoBehaviour
                 transform.LookAt(rotateTowardPlayer);
             
                 playerAnims.SetBool("isRunningForward", true);
-            if (playerAnims2 != null)
-            {
-                playerAnims2.SetBool("isRunningForward", true);
-            }
-
+                playerAnims.SetBool("isAttackingBlunt", false);
         }
             if (closeToPlayer)
             {
@@ -62,32 +57,9 @@ public class AttackScript : MonoBehaviour
                 Vector3 rotateTowardPlayer = new Vector3(player.transform.position.x,
                 transform.position.y, player.transform.position.z);
                 transform.LookAt(rotateTowardPlayer);
+                playerAnims.SetBool("isAttackingBlunt", true);
+                //playerAnims.SetBool("isWalkingForward", false);
+                playerAnims.SetBool("isRunningForward", false);
         }
         }
-
-    void OnTriggerStay(Collider Player)
-    {
-        if (Player.gameObject.tag == "Player")
-        {
-            playerAnims.SetBool("isAttackingBlunt", true);
-            //playerAnims.SetBool("isWalkingForward", false);
-            playerAnims.SetBool("isRunningForward", false);
-            if (playerAnims2 != null)
-            {
-                playerAnims2.SetBool("isAttackingBlunt", true);
-                playerAnims2.SetBool("isRunningForward", false);
-            }
-        }
-    }
-    void OnTriggerExit(Collider Player)
-    {
-        if (Player.gameObject.tag == "Player")
-        {
-            playerAnims.SetBool("isAttackingBlunt", false);
-            if (playerAnims2 != null)
-            {
-                playerAnims2.SetBool("isAttackingBlunt", false);
-            }
-        }
-    }
 }

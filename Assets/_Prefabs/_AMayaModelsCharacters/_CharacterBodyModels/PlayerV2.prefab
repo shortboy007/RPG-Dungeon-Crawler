@@ -411,6 +411,8 @@ MonoBehaviour:
   deathMenuCam: {fileID: 0}
   deathMenuCanvas: {fileID: 0}
   pD: {fileID: 0}
+  currentHealth: 100
+  healthBar: {fileID: 0}
   GoldCounter: 0
   DefenseRating: 0
   MonsterDamage: 0
@@ -509,6 +511,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MuscledFBody
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360586209351440882, guid: 0861dd847bc27b44fb1f79a4fae9f107,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1360586209351440882, guid: 0861dd847bc27b44fb1f79a4fae9f107,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8965477407446578312, guid: 0861dd847bc27b44fb1f79a4fae9f107,
         type: 3}
@@ -1714,6 +1726,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SlimMBody
+      objectReference: {fileID: 0}
+    - target: {fileID: 2187729551595938376, guid: 2f743fa368467cb489ed09158d715166,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8130795776467308338, guid: 2f743fa368467cb489ed09158d715166,
         type: 3}
@@ -3009,6 +3026,16 @@ PrefabInstance:
     - target: {fileID: 2145514620525683270, guid: 2d4b2bc946d60074cbb4168050add686,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308127492963798844, guid: 2d4b2bc946d60074cbb4168050add686,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8308127492963798844, guid: 2d4b2bc946d60074cbb4168050add686,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4137187161044991079, guid: 2d4b2bc946d60074cbb4168050add686,
@@ -4893,6 +4920,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SlimFBody
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479957898017643240, guid: a879b9471855f29498a75e21009c8d7d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7479957898017643240, guid: a879b9471855f29498a75e21009c8d7d,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 667700229841926034, guid: a879b9471855f29498a75e21009c8d7d,
         type: 3}

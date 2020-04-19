@@ -18,6 +18,9 @@ public class PlayerStatHandler : MonoBehaviour
 
     public static int PlayerHealth = 100;
 
+    public int currentHealth = PlayerHealth;
+    public RectTransform healthBar;
+
     public static int PlayerMagic = 100;
 
     public static int PlayerArrows = 100;
@@ -412,10 +415,15 @@ public class PlayerStatHandler : MonoBehaviour
 
     }
 
+    void OnChangeHealth(int PlayerHealth)
+    {
+        healthBar.sizeDelta = new Vector2(PlayerHealth, healthBar.sizeDelta.y);
+    }
+
     void OnCollisionEnter(Collision coll)
     {
         GameObject collidedWith = coll.gameObject;
-        if (collidedWith.tag == "Monster")
+        if (collidedWith.tag == "Monster" || collidedWith.tag == "EnemyWeapon" || collidedWith.tag == "GuardWeapon")
         {
             PlayerHealth = PlayerHealth - totalMonsterDamage;
 

@@ -7,7 +7,6 @@ public class ChaseScript : MonoBehaviour
     public Transform player;
 
     public Animator playerAnims;
-    public Animator playerAnims2;
 
     public int walkSpeed = 5;
     public int runSpeed = 20;
@@ -64,11 +63,7 @@ public class ChaseScript : MonoBehaviour
             transform.LookAt(rotateTowardPlayer);
             playerAnims.SetBool("isWalkingForward", true);
             playerAnims.SetBool("isRunningForward", false);
-            if (playerAnims2 != null)
-            {
-                playerAnims2.SetBool("isWalkingForward", true);
-                playerAnims2.SetBool("isRunningForward", false);
-            }
+
         }
         if (closeToPlayer)
         {
@@ -79,11 +74,6 @@ public class ChaseScript : MonoBehaviour
             transform.LookAt(rotateTowardPlayer);
             playerAnims.SetBool("isWalkingForward", false);
             playerAnims.SetBool("isRunningForward", false);
-            if (playerAnims2 != null)
-            {
-                playerAnims2.SetBool("isWalkingForward", false);
-                playerAnims2.SetBool("isRunningForward", false);
-            }
         }
     }
 }

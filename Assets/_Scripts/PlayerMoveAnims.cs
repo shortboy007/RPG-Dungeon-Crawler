@@ -145,7 +145,7 @@ public class PlayerMoveAnims : MonoBehaviour
                 playerAnims5.SetBool("isJumping", false);
             }
         }
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.L) || Input.GetMouseButtonDown(2))
         {
             playerAnims.SetBool("isAttackingRanged", true);
             if (playerAnims2 != null || playerAnims3 != null || playerAnims4 != null || playerAnims5 != null)

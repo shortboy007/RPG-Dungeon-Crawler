@@ -44,12 +44,14 @@ public class DialogueHandlerScript : MonoBehaviour
         {
             seePlayerDialogueChoose();
             thoughtBubbleCanvas.GetComponent<Canvas>().enabled = true;
+            //thoughtBubbleCanvas.sizeDelta = new Vector2(thoughtBubbleText.text.Length, thoughtBubbleCanvas.sizeDelta.y);
         }
 
         if (Player.gameObject.tag == "Player" && thisBody.GetComponent<WeaponSelectHandlerV3>().notHoldingWeapon == false && thisBody != null)
         {
             seePlayerWeaponDialogueChoose();
             thoughtBubbleCanvas.GetComponent<Canvas>().enabled = true;
+            //thoughtBubbleCanvas.sizeDelta = new Vector2(thoughtBubbleText.text.Length, thoughtBubbleCanvas.sizeDelta.y);
         }
     }
 
@@ -62,7 +64,7 @@ public class DialogueHandlerScript : MonoBehaviour
 
         if (Player.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.E) && thisBody.GetComponent<WeaponSelectHandlerV3>().notHoldingWeapon == false && thisBody != null)
         {
-            seePlayerDialogueChoose();
+            seePlayerWeaponDialogueChoose();
         }
     }
     void OnTriggerExit(Collider Player)

@@ -14,8 +14,7 @@ public class NPCGuardAIMultiScriptStates : MonoBehaviour
 
     //public GameObject monster;
     //public GameObject[] monsters;
-    public GameObject slimGuardSword;
-    public GameObject muscledGuardSword;
+    public GameObject guardSword;
 
     //public Animator playerAnims;
 
@@ -100,20 +99,15 @@ public class NPCGuardAIMultiScriptStates : MonoBehaviour
         }
         if(thisBody.GetComponent<WeaponSelectHandlerV3>().notHoldingWeapon == false && thisBody != null)
         {
-            if (this.GetComponent<CharacterNPCRandomizer>().slimBodyChosen == true)
+            if (this.GetComponent<CharacterNPCRandomizer>().bodyChosen == true)
             {
-                slimGuardSword.SetActive(true);
-            }
-            if (this.GetComponent<CharacterNPCRandomizer>().muscledBodyChosen == true)
-            {
-                muscledGuardSword.SetActive(true);
+                guardSword.SetActive(true);
             }
 
         }
         else
         {
-            slimGuardSword.SetActive(false);
-            muscledGuardSword.SetActive(false);
+            guardSword.SetActive(false);
         }
 
     }

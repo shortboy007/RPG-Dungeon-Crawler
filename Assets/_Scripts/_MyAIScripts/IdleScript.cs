@@ -5,7 +5,6 @@ using UnityEngine;
 public class IdleScript : MonoBehaviour
 {
     public Animator playerAnims;
-    public Animator playerAnims2;
 
     public int walkSpeed = 5;
     public int runSpeed = 20;
@@ -31,9 +30,5 @@ public class IdleScript : MonoBehaviour
         runSpeed = 0;
 
         playerAnims.SetBool("isWalkingForward", false);
-        if (playerAnims2 != null)
-        {
-            playerAnims2.SetBool("isWalkingForward", false);
-        }
     }
 }
