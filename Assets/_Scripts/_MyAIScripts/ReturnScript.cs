@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ReturnScript : MonoBehaviour
 {
+    //This script is used by several scripts which act as state machines for different npc's in this game. This is the script that handles when an NPC such as a civilian, guard, or merchant sees the player.
+
     //public Transform home;
 
     Vector3 startPos;
@@ -28,6 +30,10 @@ public class ReturnScript : MonoBehaviour
 
     void Return()
     {
+        //If this script is active, the character will head back to their starting position. 
+        //Originally the characters would each choose a random house around their village
+        //and then head there when this script was active.
+
         walkSpeed = 5;
         runSpeed = 20;
 

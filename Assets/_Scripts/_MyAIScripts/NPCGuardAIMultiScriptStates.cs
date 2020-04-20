@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 public class NPCGuardAIMultiScriptStates : MonoBehaviour
 {
+
+    //This script acts as a state machine for the guard NPCs within the game. There are several scripts which set up behaviors for each state that are located on the character along with this script which are
+    //referenced by this script and activated or deactivated depending on various factors.
+
     public PlayerStatHandler playerStatHandler;
 
     public GameObject thisBody;
@@ -54,6 +58,8 @@ public class NPCGuardAIMultiScriptStates : MonoBehaviour
     {        
         thisBody = GameObject.FindWithTag("ThisBody");
 
+        //If the player is within a certain distance of the gameobject or character that this script is active on, the boolean closeToPlayer is true. Otherwise, safeDistance is true.       
+
         float distToPlayer = Vector3.Distance(this.transform.position, player.transform.position);
         //Debug.Log("Player" + distToPlayer);
         if (distToPlayer <= 10)
@@ -89,6 +95,9 @@ public class NPCGuardAIMultiScriptStates : MonoBehaviour
         {
             ChaseState();
         }
+
+        //If the character is too close to the player and the player has a weapon out, the attack state is set to true.
+
         else if (tooCloseToPlayerWithWeapon && PlayerStatHandler.PeopleKilled >=1 && thisBody.GetComponent<WeaponSelectHandlerV3>().notHoldingWeapon == false && thisBody != null)
         {           
             AttackState();
@@ -97,7 +106,10 @@ public class NPCGuardAIMultiScriptStates : MonoBehaviour
         {
            stateTimer();
         }
-        if(thisBody.GetComponent<WeaponSelectHandlerV3>().notHoldingWeapon == false && thisBody != null)
+
+        //If the player has a weapon out, the character pulls out his sword and the character's sword game object is set active.
+
+        if (thisBody.GetComponent<WeaponSelectHandlerV3>().notHoldingWeapon == false && thisBody != null)
         {
             if (this.GetComponent<CharacterNPCRandomizer>().bodyChosen == true)
             {
@@ -111,6 +123,11 @@ public class NPCGuardAIMultiScriptStates : MonoBehaviour
         }
 
     }
+
+    //This stateTimer method adds to the count variable every frame and when it gets to 100, the character's behavior shifts from the idle state to the wander state. 
+    //The count variable is then set to 0 and starts again. The stateTimer in this case also takes into account the different behaviors and states which the character has.
+    //It has if statements which look for which boolean or state is active at the time and then if the conditions for that boolean are not met after count reaches 100, the default idle state is set as the behavior.
+    //The default stateTimer code switches back and forth between idle state and wander state until the player is seen.
 
     void stateTimer()
     {
@@ -155,6 +172,8 @@ public class NPCGuardAIMultiScriptStates : MonoBehaviour
             retreatState = false;
         }
     }
+
+    //For each state, when a boolean is activated such as idleState or WanderState, that specific script and boolean which are located on the character gameobject are set active while the other scripts and booleans are deactivated.
 
     void IdleState()
     {
@@ -225,6 +244,8 @@ public class NPCGuardAIMultiScriptStates : MonoBehaviour
         attackState = false;
     }
 
+    //This little bit of code was a test to see if I could set up the stateTimer method with random values. The version which is used now seems to work much better.
+
     /*void WanderOrReturn()
     {
         count = 0;
@@ -246,4 +267,4 @@ public class NPCGuardAIMultiScriptStates : MonoBehaviour
         }
     }*/
 
-    }
+}

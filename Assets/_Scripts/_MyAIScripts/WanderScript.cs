@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WanderScript : MonoBehaviour
 {
+    //This script is used by several scripts which act as state machines for different npc's in this game. This is the script that handles when an NPC such as a civilian, guard, or merchant sees the player.
+
     public Animator playerAnims;
 
     public int walkSpeed = 5;
@@ -20,6 +22,8 @@ public class WanderScript : MonoBehaviour
 
     void Update()
     {
+        //Every time the count variable reaches 100, a random direction is chosen for the character to walk. The speed is also set to walking speed which is 5.
+
         count++;
 
         if (count == 100)
@@ -58,7 +62,7 @@ public class WanderScript : MonoBehaviour
     void Wander()
     {
         count = 0;
-        walkSpeed = 10;
+        walkSpeed = 5;
         runSpeed = 20;
     }
 }

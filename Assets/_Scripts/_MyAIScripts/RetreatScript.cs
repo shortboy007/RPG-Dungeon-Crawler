@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RetreatScript : MonoBehaviour
 {
+    //This script is used by several scripts which act as state machines for different npc's in this game. This is the script that handles when an NPC such as a civilian, guard, or merchant sees the player.
+
     public Transform player;
     public Transform home;
 
@@ -29,6 +31,9 @@ public class RetreatScript : MonoBehaviour
 
     void Retreat()
     {
+        //If the player is within a certain distance of the gameobject or character that this script is active on, the boolean closeToPlayer is true.
+        //If closeToPlayer is true, the character will move in the opposite direction of the player as if they are running away.
+
         float dist = Vector3.Distance(transform.position, player.transform.position);
         //Debug.Log(dist);
         if (dist <= 100.0f)

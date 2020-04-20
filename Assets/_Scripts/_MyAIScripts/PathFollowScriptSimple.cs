@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class PathFollowScriptSimple : MonoBehaviour
 {
+    //This is a script which I was working with in order to create travel routes around the overworld map and possibly within towns as well. 
+    //I wanted to make it so that the characters could travel set paths between villages on the overworld and the player could encounter them.
+    //I wanted to be able to make specific paths for guards to follow as if they were on patrol.
+    //I also thought that it might be interesting to have a racing mechanic set up in a minigame as well which would use this patrol point 
+    //method for the AI the player would be racing.
+    //As of now this just lets the characters follow set patrol points until they reach the chosen patrol point, 
+    //which causes the next point to be chosen for the character to follow.
+
     public Animator playerAnims;
 
     public Transform patrolPoint1;

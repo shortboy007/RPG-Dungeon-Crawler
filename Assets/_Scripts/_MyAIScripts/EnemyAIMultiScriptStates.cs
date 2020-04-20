@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class EnemyAIMultiScriptStates : MonoBehaviour
 { 
+
+    //This script acts as a state machine for the enemies within the game. There are several scripts which set up behaviors for each state that are located on the character along with this script which are
+    //referenced by this script and activated or deactivated depending on various factors.
+
 public PlayerStatHandler playerStatHandler;
 
 public Transform player;
@@ -44,7 +48,9 @@ void Start()
 // Update is called once per frame
 void Update()
 {
-    float distToPlayer = Vector3.Distance(this.transform.position, player.transform.position);
+        //If the player is within a certain distance of the gameobject or character that this script is active on, the boolean closeToPlayer is true. Otherwise, safeDistance is true;        
+
+        float distToPlayer = Vector3.Distance(this.transform.position, player.transform.position);
     //Debug.Log("Player" + distToPlayer);
     if (distToPlayer <= 10)
     {
@@ -56,30 +62,25 @@ void Update()
         closeToPlayer = false;
         safeDistance = true;
     }
-    if (distToPlayer <= 5)
-    {
-        tooCloseToPlayerWithWeapon = true;
-    }
-    else
-    {
-        tooCloseToPlayerWithWeapon = false;
-    }
-    /* float distToMonster = Vector3.Distance(this.transform.position, monster.transform.position);
-     //Debug.Log("Monster" + distToMonster);
-     if (distToMonster < 30)
-     {
-         closeToMonster = true;
-     }
-     else
-     {
-         closeToMonster = false;
-     }*/
-
+        
     if (closeToPlayer)
     {
         AttackState();
     }
-        /*if (tooCloseToPlayerWithWeapon && PlayerStatHandler.MonstersKilled >= 100 && player.GetComponent<WeaponSelectHandlerV2>().notHoldingWeapon == false)
+
+    //This bit of commented out script is set up to make the monsters run away from the player if the player has a weapon out and has killed enough monsters to be considered a threat and terror to them.
+
+    //if (distToPlayer <= 5)
+    //{
+    //    tooCloseToPlayerWithWeapon = true;
+    //}
+    //else
+    //{
+    //    tooCloseToPlayerWithWeapon = false;
+    //}
+
+
+        /*if (tooCloseToPlayerWithWeapon && PlayerStatHandler.MonstersKilled >= 100 && player.GetComponent<WeaponSelectHandlerV3>().notHoldingWeapon == false)
         {
             RetreatState();
         }*/
@@ -97,7 +98,12 @@ void Update()
     }
 }
 
-void stateTimer()
+    //This stateTimer method adds to the count variable every frame and when it gets to 100, the character's behavior shifts from the idle state to the wander state. 
+    //The count variable is then set to 0 and starts again. The stateTimer in this case also takes into account the different behaviors and states which the character has.
+    //It has if statements which look for which boolean or state is active at the time and then if the conditions for that boolean are not met after count reaches 100, the default idle state is set as the behavior.
+    //The default stateTimer code switches back and forth between idle state and wander state until the player is seen.
+
+    void stateTimer()
 {
     count++;
     if (count > 100 && idleState)
@@ -142,6 +148,7 @@ void stateTimer()
         retreatState = false;
         }
 }
+    //For each state, when a boolean is activated such as idleState or WanderState, that specific script and boolean which are located on the character gameobject are set active while the other scripts and booleans are deactivated.
 
     void IdleState()
     {
@@ -215,6 +222,8 @@ void stateTimer()
         retreatState = false;
         attackState = false;
     }
+
+    //This code is supposed to make monsters move away from each other if they collide.
     private void OnTriggerStay(Collider monster)
     {
         if (monster.gameObject.tag == "Monster")

@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 public class NPCMerchantAIMultiScriptStates : MonoBehaviour
 {
+
+    //This script acts as a state machine for the merchant NPCs within the game. There are several scripts which set up behaviors for each state that are located on the character along with this script which are
+    //referenced by this script and activated or deactivated depending on various factors.
+
     public PlayerStatHandler playerStatHandler;
 
     public Transform player;
@@ -42,6 +46,8 @@ public class NPCMerchantAIMultiScriptStates : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //If the player is within a certain distance of the gameobject or character that this script is active on, the boolean closeToPlayer is true. Otherwise, safeDistance is true;        
+
         float distToPlayer = Vector3.Distance(this.transform.position, player.transform.position);
         //Debug.Log("Player" + distToPlayer);
         if (distToPlayer <= 10)
@@ -77,6 +83,9 @@ public class NPCMerchantAIMultiScriptStates : MonoBehaviour
         {
             ChaseState();
         }
+
+        //If the character is too close to the player and the player has a weapon out, the retreat state is set to true.
+
         if (tooCloseToPlayerWithWeapon && PlayerStatHandler.PeopleKilled >=1 && player.GetComponent<WeaponSelectHandlerV3>().notHoldingWeapon == false)
         {           
             RetreatState();
@@ -86,6 +95,13 @@ public class NPCMerchantAIMultiScriptStates : MonoBehaviour
             IdleState();
         }
     }
+
+    //This stateTimer method adds to the count variable every frame and when it gets to 100, the character's behavior shifts from the idle state to the wander state. 
+    //The count variable is then set to 0 and starts again. The stateTimer in this case also takes into account the different behaviors and states which the character has.
+    //It has if statements which look for which boolean or state is active at the time and then if the conditions for that boolean are not met after count reaches 100, the default idle state is set as the behavior.
+    //The default stateTimer code switches back and forth between idle state and wander state until the player is seen.
+
+    //The merchant is stationary for the duration of the game but can still retreat if the player has killed a person and has a weapon out.
 
     void stateTimer()
     {
@@ -132,6 +148,8 @@ public class NPCMerchantAIMultiScriptStates : MonoBehaviour
             retreatState = false;
         }
     }
+
+    //For each state, when a boolean is activated such as idleState or WanderState, that specific script and boolean which are located on the character gameobject are set active while the other scripts and booleans are deactivated.
 
     void IdleState()
     {

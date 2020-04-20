@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ChaseScript : MonoBehaviour
 {
+    //This script is used by several scripts which act as state machines for different npc's in this game. This is the script that handles when an NPC such as a civilian, guard, or merchant sees the player.
+
     public Transform player;
 
     public Animator playerAnims;
@@ -31,6 +33,7 @@ public class ChaseScript : MonoBehaviour
 
     void Chase()
     {
+        //If the player is within a certain distance of the gameobject or character that this script is active on, the boolean closeToPlayer is true.
 
         float dist = Vector3.Distance(transform.position, player.transform.position);
         //Debug.Log(dist);
@@ -52,6 +55,8 @@ public class ChaseScript : MonoBehaviour
             awayFromPlayer = false;
         }
 
+        //If the character is not close to the player, they will move and rotate towards the player.
+
         if (awayFromPlayer)
         {
             walkSpeed = 5;
@@ -65,6 +70,9 @@ public class ChaseScript : MonoBehaviour
             playerAnims.SetBool("isRunningForward", false);
 
         }
+
+        //If the character is close to the player, his movement speed becomes 0 and the character rotates toward the player.
+
         if (closeToPlayer)
         {
             walkSpeed = 0;

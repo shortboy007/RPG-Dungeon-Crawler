@@ -19,6 +19,10 @@ public class RotateTowardPlayer : MonoBehaviour
     void Update()
     {
 
+        //If the player is within a certain distance of the gameobject or character that this script is active on, the boolean closeToPlayer is true.
+        //If closeToPlayer is true, the gameobject will rotate towards the player. This was originally meant to be placed on an NPC's head or eye objects
+        //so that the character could look at the player while still going about their business.
+
         float distToPlayer = Vector3.Distance(transform.position, player.transform.position);
         //Debug.Log("Player" + distToPlayer);
         if (distToPlayer <= 25)

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PathFollowRandomScript : MonoBehaviour
 {
+    //This is a script which I was working with in order to create travel routes around the overworld map and possibly within towns as well. 
+    //I wanted to make it so that the characters could travel randomly between villages on the overworld and the player could encounter them.
+    //As of now this just lets the characters follow random patrol points until they reach the chosen patrol point, 
+    //which causes a new point to be chosen for the character to follow.
+
     public Animator playerAnims;
 
     public GameObject patrolPoint;
